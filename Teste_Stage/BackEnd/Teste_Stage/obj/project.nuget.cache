@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZQqQw3Hylw0cbV4P5iYA9at9Iv1fyoHBeJZBw4u4J+EOeAVDPqaHBnZteLY9yhVLHivY4q/3lEE51gb9IfYsxQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Teste_Stage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\igort\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\igort\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\igort\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\igort\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\igort\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\igort\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
