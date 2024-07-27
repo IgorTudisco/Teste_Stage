@@ -1,9 +1,7 @@
 ﻿using AutoMapper;
-using Microsoft.AspNetCore.JsonPatch;
-using Microsoft.AspNetCore.JsonPatch.Internal;
 using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data;
-using Teste_Stage.Data.Dtos;
+using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
 
 namespace Teste_Stage.Controllers;
@@ -12,10 +10,10 @@ namespace Teste_Stage.Controllers;
 [Route("[Controller]")]
 public class EntrevistaController : ControllerBase
 {
-    private EntrevistaContext _context;
+    private CandidatoContext _context;
     private IMapper _mapper;
 
-    public EntrevistaController(EntrevistaContext context, IMapper mapper)
+    public EntrevistaController(CandidatoContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
@@ -24,7 +22,7 @@ public class EntrevistaController : ControllerBase
     /// <summary>
     /// Adiciona um entrevista ao banco de dados
     /// </summary>
-    /// <param name="entrevistaDto">Objeto com os campos necessários para criação de um entrevista</param>
+    /// <param name="entrevistaDto">Objeto com os campos necessários para criação de uma entrevista</param>
     /// <returns>IActionResult</returns>
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpPost]

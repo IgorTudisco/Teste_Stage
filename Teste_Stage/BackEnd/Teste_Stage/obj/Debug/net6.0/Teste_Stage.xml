@@ -4,11 +4,101 @@
         <name>Teste_Stage</name>
     </assembly>
     <members>
-        <member name="M:Teste_Stage.Controllers.EntrevistaController.CadastrarEntrevista(Teste_Stage.Data.Dtos.CreateEntrevistaDto)">
+        <member name="M:Teste_Stage.Controllers.CandidatoController.CadastrarCandidato(Teste_Stage.Data.Dtos.CandidatoDtos.CreateCandidatoDto)">
+            <summary>
+            Adiciona um candidato ao banco de dados
+            </summary>
+            <param name="candidatoDto">Objeto com os campos necessários para criação de um candidato</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.CandidatoController.RecuperaCandidatos(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de candidatos. Você pode escolher a quantidade de elementos nessa lista.
+            </summary>
+            <param name="skip">Número de elementos a pular</param>
+            <param name="take">Número de elementos a retornar</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.CandidatoController.AchaCandidatoPorId(System.Int32)">
+            <summary>
+            Retorna uma candidato específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da candidato a ser encontrada</param>
+            <returns>IActionResult contendo a candidato encontrada ou um status de NotFound se a candidato não existir</returns>
+            <response code="200">Retorna a candidato encontrada</response>
+            <response code="404">Se a candidato não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.CandidatoController.AtualizaCandidato(System.Int32,Teste_Stage.Data.Dtos.CandidatoDtos.UpdateCandidatoDto)">
+            <summary>
+            Atualiza um candidato específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID do candidato a ser atualizada</param>
+            <param name="candidatoDto">Objeto contendo os dados atualizados do candidato</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a atualização for bem-sucedida</response>
+            <response code="404">Se a candidato não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.CandidatoController.DeleteCandidato(System.Int32)">
+            <summary>
+            Deleta um candidato específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID do candidato a ser deletada</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a exclusão for bem-sucedida</response>
+            <response code="404">Se o candidato não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.CadastrarEndereco(Teste_Stage.Data.Dtos.EnderecoDtos.CreateEnderecoDto)">
+            <summary>
+            Adiciona um endereco ao banco de dados
+            </summary>
+            <param name="enderecoDto">Objeto com os campos necessários para criação de um endereco</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.Recuperaenderecos(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de enderecos. Você pode escolher a quantidade de elementos nessa lista.
+            </summary>
+            <param name="skip">Número de elementos a pular</param>
+            <param name="take">Número de elementos a retornar</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.AchaEnderecoPorId(System.Int32)">
+            <summary>
+            Retorna um endereco específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereco a ser encontrada</param>
+            <returns>IActionResult contendo o endereco encontrada ou um status de NotFound se o endereco não existir</returns>
+            <response code="200">Retorna a endereco encontrada</response>
+            <response code="404">Se a endereco não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.AtualizaEndereco(System.Int32,Teste_Stage.Data.Dtos.EnderecoDtos.UpdateEnderecoDto)">
+            <summary>
+            Atualiza uma endereco específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereco a ser atualizada</param>
+            <param name="enderecoDto">Objeto contendo os dados atualizados do endereco</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a atualização for bem-sucedida</response>
+            <response code="404">Se a endereco não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.DeleteEndereco(System.Int32)">
+            <summary>
+            Deleta uma endereco específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereco a ser deletada</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a exclusão for bem-sucedida</response>
+            <response code="404">Se o endereco não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.CadastrarEntrevista(Teste_Stage.Data.Dtos.EntrevistaDtos.CreateEntrevistaDto)">
             <summary>
             Adiciona um entrevista ao banco de dados
             </summary>
-            <param name="entrevistaDto">Objeto com os campos necessários para criação de um entrevista</param>
+            <param name="entrevistaDto">Objeto com os campos necessários para criação de uma entrevista</param>
             <returns>IActionResult</returns>
             <response code="201">Caso inserção seja feita com sucesso</response>
         </member>
@@ -30,7 +120,7 @@
             <response code="200">Retorna a entrevista encontrada</response>
             <response code="404">Se a entrevista não for encontrada</response>
         </member>
-        <member name="M:Teste_Stage.Controllers.EntrevistaController.AtualizaEntrevista(System.Int32,Teste_Stage.Data.Dtos.UpdateEntrevistaDto)">
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.AtualizaEntrevista(System.Int32,Teste_Stage.Data.Dtos.EntrevistaDtos.UpdateEntrevistaDto)">
             <summary>
             Atualiza uma entrevista específica com base no ID fornecido.
             </summary>

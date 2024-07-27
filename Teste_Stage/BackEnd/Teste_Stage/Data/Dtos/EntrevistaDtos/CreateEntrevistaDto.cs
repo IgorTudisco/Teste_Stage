@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Teste_Stage.Models;
 
-namespace Teste_Stage.Data.Dtos;
+namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class CreateEntrevistaDto
 {
@@ -13,17 +13,17 @@ public class CreateEntrevistaDto
     private Candidato candidato;
 
     [Required(ErrorMessage = "Campo cargo é obrigatório")]
-    private String cargo;
+    private string cargo;
 
     [Required(ErrorMessage = "Campo idade é obrigatório")]
     [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
     private int idade;
 
     [Required(ErrorMessage = "Campo fitCultral é obrigatório")]
-    private String fitCultral;
+    private string fitCultral;
 
     [Required(ErrorMessage = "Campo testeFeito é obrigatório")]
-    private Boolean testeFeito;
+    private bool testeFeito;
 
     [Required(ErrorMessage = "Campo pontuacaoTest é obrigatório")]
     [Range(0.01, 100.00, ErrorMessage = "O campo pontuacaoTest deve estar entre 0,01 e 100,00")]

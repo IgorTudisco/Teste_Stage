@@ -6,92 +6,147 @@ using Teste_Stage.Data;
 
 #nullable disable
 
-namespace Teste_Stage.Migrations;
-
-[DbContext(typeof(EntrevistaContext))]
-partial class EntrevistaContextModelSnapshot : ModelSnapshot
+namespace Teste_Stage.Migrations
 {
-    protected override void BuildModel(ModelBuilder modelBuilder)
+    [DbContext(typeof(CandidatoContext))]
+    partial class EntrevistaContextModelSnapshot : ModelSnapshot
     {
+        protected override void BuildModel(ModelBuilder modelBuilder)
+        {
 #pragma warning disable 612, 618
-        modelBuilder
-            .HasAnnotation("ProductVersion", "6.0.10")
-            .HasAnnotation("Relational:MaxIdentifierLength", 64);
+            modelBuilder
+                .HasAnnotation("ProductVersion", "6.0.10")
+                .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
-        modelBuilder.Entity("Teste_Stage.Models.Candidato", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+            modelBuilder.Entity("Teste_Stage.Models.Candidato", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                b.Property<string>("Description")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<string>("Email")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<string>("Endereco")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("int");
 
-                b.Property<string>("Name")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<string>("Genero")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<string>("NumeroContato")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.HasKey("Id");
+                    b.Property<string>("NumeroContato")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.ToTable("Candidato");
-            });
+                    b.HasKey("Id");
 
-        modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
-            {
-                b.Property<int>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("int");
+                    b.HasIndex("EnderecoId")
+                        .IsUnique();
 
-                b.Property<int>("CandidatoId")
-                    .HasColumnType("int");
+                    b.ToTable("Candidatos");
+                });
 
-                b.Property<string>("Cargo")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                b.Property<string>("FitCultral")
-                    .IsRequired()
-                    .HasColumnType("longtext");
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<int>("Idade")
-                    .HasColumnType("int");
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<float>("PontuacaoTest")
-                    .HasColumnType("float");
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.Property<bool>("TesteFeito")
-                    .HasColumnType("tinyint(1)");
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.HasKey("Id");
+                    b.Property<string>("Uf")
+                        .IsRequired()
+                        .HasColumnType("longtext");
 
-                b.HasIndex("CandidatoId");
+                    b.HasKey("Id");
 
-                b.ToTable("Entrevistas");
-            });
+                    b.ToTable("Enderecos");
+                });
 
-        modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
-            {
-                b.HasOne("Teste_Stage.Models.Candidato", "Candidato")
-                    .WithMany()
-                    .HasForeignKey("CandidatoId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+            modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
 
-                b.Navigation("Candidato");
-            });
+                    b.Property<int>("CandidatoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cargo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("FitCultral")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Idade")
+                        .HasColumnType("int");
+
+                    b.Property<float>("PontuacaoTest")
+                        .HasColumnType("float");
+
+                    b.Property<bool>("TesteFeito")
+                        .HasColumnType("tinyint(1)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CandidatoId");
+
+                    b.ToTable("Entrevistas");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Candidato", b =>
+                {
+                    b.HasOne("Teste_Stage.Models.Endereco", "Endereco")
+                        .WithOne("Candidato")
+                        .HasForeignKey("Teste_Stage.Models.Candidato", "EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
+                {
+                    b.HasOne("Teste_Stage.Models.Candidato", "Candidato")
+                        .WithMany()
+                        .HasForeignKey("CandidatoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Candidato");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Navigation("Candidato")
+                        .IsRequired();
+                });
 #pragma warning restore 612, 618
+        }
     }
 }

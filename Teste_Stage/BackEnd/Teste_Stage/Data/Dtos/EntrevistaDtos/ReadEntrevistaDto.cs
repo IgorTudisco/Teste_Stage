@@ -1,19 +1,19 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Teste_Stage.Models;
 
-namespace Teste_Stage.Data.Dtos;
+namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class ReadEntrevistaDto
 {
     private Candidato candidato;
 
-    private String cargo;
+    private string cargo;
 
     private int idade;
 
-    private String fitCultral;
+    private string fitCultral;
 
-    private Boolean testeFeito;
+    private bool testeFeito;
 
     private float pontuacaoTest;
 

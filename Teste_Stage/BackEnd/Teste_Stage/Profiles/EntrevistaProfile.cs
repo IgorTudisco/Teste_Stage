@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Teste_Stage.Data.Dtos;
+using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
 
 namespace Teste_Stage.Profiles;

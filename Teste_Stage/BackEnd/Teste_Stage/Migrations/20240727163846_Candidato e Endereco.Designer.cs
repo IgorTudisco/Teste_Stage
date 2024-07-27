@@ -10,8 +10,8 @@ using Teste_Stage.Data;
 namespace Teste_Stage.Migrations
 {
     [DbContext(typeof(CandidatoContext))]
-    [Migration("20240726180041_CriandoTabelaDeEntrevista")]
-    partial class CriandoTabelaDeEntrevista
+    [Migration("20240727163846_Candidato e Endereco")]
+    partial class CandidatoeEndereco
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -34,7 +34,10 @@ namespace Teste_Stage.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Endereco")
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Genero")
                         .IsRequired()
                         .HasColumnType("longtext");
 
@@ -48,7 +51,41 @@ namespace Teste_Stage.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Candidato");
+                    b.HasIndex("EnderecoId")
+                        .IsUnique();
+
+                    b.ToTable("Candidatos");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Uf")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Enderecos");
                 });
 
             modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
@@ -84,6 +121,17 @@ namespace Teste_Stage.Migrations
                     b.ToTable("Entrevistas");
                 });
 
+            modelBuilder.Entity("Teste_Stage.Models.Candidato", b =>
+                {
+                    b.HasOne("Teste_Stage.Models.Endereco", "Endereco")
+                        .WithOne("Candidato")
+                        .HasForeignKey("Teste_Stage.Models.Candidato", "EnderecoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Endereco");
+                });
+
             modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
                 {
                     b.HasOne("Teste_Stage.Models.Candidato", "Candidato")
@@ -93,6 +141,12 @@ namespace Teste_Stage.Migrations
                         .IsRequired();
 
                     b.Navigation("Candidato");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Navigation("Candidato")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -24,7 +24,6 @@ C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\D
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\scopedcss\bundle\Teste_Stage.styles.css
-C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.csproj.CopyComplete
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.dll
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\refint\Teste_Stage.dll
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.pdb
@@ -47,3 +46,7 @@ C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\D
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Teste_Stage.xml
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.xml
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.sourcelink.json
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_St.93212A73.Up2Date
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
