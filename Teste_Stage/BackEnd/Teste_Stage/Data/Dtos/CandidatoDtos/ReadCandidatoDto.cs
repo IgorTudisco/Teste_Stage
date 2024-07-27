@@ -4,32 +4,24 @@ namespace Teste_Stage.Data.Dtos.CandidatoDtos;
 
 public class ReadCandidatoDto
 {
-    private string name;
+    public string Name { get; set; }
 
-    private string genero;
+    public string Genero { get; set; }
 
-    private string numeroContato;
+    public string NumeroContato { get; set; }
 
-    private string email;
+    public string Email { get; set; }
 
-    private string endereco;
+    public string Endereco { get; set; }
 
-    private string descricao;
+    public string Descricao { get; set; }
 
-    private int enderecoId;
+    public int EnderecoId { get; set; }
 
-    private ReadEnderecoDto enderecoDto;
+    public ReadEnderecoDto ReadEnderecoDto { get; set; }
 
     public ReadCandidatoDto()
     {
     }
 
-    public string Name { get => name; set => name = value; }
-    public string Genero { get => genero; set => genero = value; }
-    public string NumeroContato { get => numeroContato; set => numeroContato = value; }
-    public string Email { get => email; set => email = value; }
-    public string Endereco { get => endereco; set => endereco = value; }
-    public string Descricao { get => descricao; set => descricao = value; }
-    public int EnderecoId { get => enderecoId; set => enderecoId = value; }
-    public ReadEnderecoDto EnderecoDto { get => enderecoDto; set => enderecoDto = value; }
 }

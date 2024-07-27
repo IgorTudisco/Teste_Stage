@@ -6,23 +6,18 @@ namespace Teste_Stage.Data.Dtos.EnderecoDtos;
 public class CreateEnderecoDto
 {
 
-    private string logradouro;
+    public string Logradouro { get; set; }
 
-    private string numero;
+    public string Numero { get; set; }
 
-    private string cidade;
+    public string Cidade { get; set; }
 
-    private string estado;
+    public string Estado { get; set; }
 
-    private string uf;
+    public string UF { get; set; }
 
     public CreateEnderecoDto()
     {
     }
 
-    public string Logradouro { get => logradouro; set => logradouro = value; }
-    public string Numero { get => numero; set => numero = value; }
-    public string Cidade { get => cidade; set => cidade = value; }
-    public string Estado { get => estado; set => estado = value; }
-    public string Uf { get => uf; set => uf = value; }
 }

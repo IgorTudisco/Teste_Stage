@@ -4,26 +4,20 @@ namespace Teste_Stage.Data.Dtos.CandidatoDtos;
 
 public class CreateCandidatoDto
 {
-    private String name;
+    public string Name { get; set; }
 
-    private String genero;
+    public string Genero { get; set; }
 
-    private String numeroContato;
+    public string NumeroContato { get; set; }
 
-    private String email;
+    public string Email { get; set; }
 
-    private String descricao;
+    public string Descricao { get; set; }
 
-    private int enderecoId;
+    public int EnderecoId { get; set; }
 
     public CreateCandidatoDto()
     {
     }
 
-    public string Name { get => name; set => name = value; }
-    public string Genero { get => genero; set => genero = value; }
-    public string NumeroContato { get => numeroContato; set => numeroContato = value; }
-    public string Email { get => email; set => email = value; }
-    public string Descricao { get => descricao; set => descricao = value; }
-    public int EnderecoId { get => enderecoId; set => enderecoId = value; }
 }

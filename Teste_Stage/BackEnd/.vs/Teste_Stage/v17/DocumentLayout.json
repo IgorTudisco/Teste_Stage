@@ -3,36 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\updatecandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\updatecandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\enderecodtos\\updateenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\enderecodtos\\updateenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\models\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\models\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\entrevistadtos\\createentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\entrevistadtos\\createentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\entrevistadtos\\updateentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\entrevistadtos\\updateentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\enderecodtos\\createenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\enderecodtos\\createenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\enderecodtos\\readenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\enderecodtos\\readenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\createcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\createcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\updatecandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\updatecandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\enderecodtos\\createenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\enderecodtos\\createenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\models\\entrevista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\models\\entrevista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\models\\endereco.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\models\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\models\\candidato.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\profiles\\candidatoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\profiles\\candidatoprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,20 +78,163 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateEntrevistaDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\UpdateEntrevistaDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\UpdateEntrevistaDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\UpdateEntrevistaDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\UpdateEntrevistaDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:22:20.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ReadEntrevistaDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:21:34.324Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateEntrevistaDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\CreateEntrevistaDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\CreateEntrevistaDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\CreateEntrevistaDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\CreateEntrevistaDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:19:46.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateEnderecoDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\UpdateEnderecoDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\UpdateEnderecoDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\UpdateEnderecoDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\UpdateEnderecoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:18:57.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Candidato.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Candidato.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Models\\Candidato.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Candidato.cs",
+              "RelativeToolTip": "Teste_Stage\\Models\\Candidato.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:06:24.896Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Endereco.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Endereco.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Models\\Endereco.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Endereco.cs",
+              "RelativeToolTip": "Teste_Stage\\Models\\Endereco.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:03:09.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Entrevista.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Entrevista.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Models\\Entrevista.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Entrevista.cs",
+              "RelativeToolTip": "Teste_Stage\\Models\\Entrevista.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:03:03.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReadEnderecoDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:02:59.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CreateEnderecoDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:02:56.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UpdateCandidatoDto.cs",
               "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\UpdateCandidatoDto.cs",
               "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\UpdateCandidatoDto.cs",
               "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\UpdateCandidatoDto.cs",
               "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\UpdateCandidatoDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T18:35:10.48Z",
+              "WhenOpened": "2024-07-27T19:02:53.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
+              "Title": "ReadCandidatoDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:02:51.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CreateCandidatoDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-27T19:02:48.389Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Program.cs",
               "RelativeDocumentMoniker": "Teste_Stage\\Program.cs",
@@ -75,85 +242,20 @@
               "RelativeToolTip": "Teste_Stage\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T18:26:08.348Z",
+              "WhenOpened": "2024-07-27T19:04:19.323Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ReadCandidatoDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 13,
+              "Title": "CandidatoProfile.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Profiles\\CandidatoProfile.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Profiles\\CandidatoProfile.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Profiles\\CandidatoProfile.cs",
+              "RelativeToolTip": "Teste_Stage\\Profiles\\CandidatoProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T18:15:42.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreateEnderecoDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\CreateEnderecoDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T17:41:41.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CreateCandidatoDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\CreateCandidatoDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T16:05:15.86Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Candidato.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Candidato.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Models\\Candidato.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Models\\Candidato.cs",
-              "RelativeToolTip": "Teste_Stage\\Models\\Candidato.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T15:59:42.413Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CandidatoController.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\CandidatoController.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
-              "RelativeToolTip": "Teste_Stage\\Controllers\\CandidatoController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAiwDMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T17:44:45.563Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "EnderecoController.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\EnderecoController.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
-              "RelativeToolTip": "Teste_Stage\\Controllers\\EnderecoController.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAcwGgAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-27T15:37:37.297Z",
+              "WhenOpened": "2024-07-27T19:03:56.992Z",
               "EditorCaption": ""
             }
           ]

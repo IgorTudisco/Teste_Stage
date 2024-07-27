@@ -6,35 +6,27 @@ public class Endereco
 {
     [Key]
     [Required]
-    private int id;
+    public int Id { get; set; }
 
     [MaxLength(50, ErrorMessage = "O tamanho da numero não pode passar de 1 caracteres")]
-    private string logradouro;
+    public string Logradouro { get; set; }
 
     [MaxLength(10, ErrorMessage = "O tamanho da numero não pode passar de 1 caracteres")]
-    private string numero;
+    public string Numero { get; set; }
 
     [MaxLength(50, ErrorMessage = "O tamanho da cidade não pode passar de 1 caracteres")]
-    private string cidade;
+    public string Cidade { get; set; }
 
     [MaxLength(50, ErrorMessage = "O tamanho da estado não pode passar de 1 caracteres")]
-    private string estado;
+    public string Estado { get; set; }
 
     [MaxLength(2, ErrorMessage = "O tamanho da UF não pode passar de 1 caracteres")]
-    private string uf;
+    public string UF { get; set; }
 
     public virtual Candidato Candidato { get; set; }
 
     public Endereco()
     {
     }
-
-    public int Id { get => id; set => id = value; }
-    public string Logradouro { get => logradouro; set => logradouro = value; }
-    public string Numero { get => numero; set => numero = value; }
-    public string Cidade { get => cidade; set => cidade = value; }
-    public string Estado { get => estado; set => estado = value; }
-    public string Uf { get => uf; set => uf = value; }
-
 
 }

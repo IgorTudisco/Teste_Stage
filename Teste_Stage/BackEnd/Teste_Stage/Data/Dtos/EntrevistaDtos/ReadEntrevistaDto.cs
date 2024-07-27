@@ -5,29 +5,20 @@ namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class ReadEntrevistaDto
 {
-    private Candidato candidato;
+    public Candidato Candidato { get; set; }
 
-    private string cargo;
+    public string Cargo { get; set; }
 
-    private int idade;
+    public int Idade { get; set; }
 
-    private string fitCultral;
+    public string FitCultral { get; set; }
 
-    private bool testeFeito;
+    public bool TesteFeito { get; set; }
 
-    private float pontuacaoTest;
-
-    private DateTime horaDaConsulta = DateTime.Now;
+    public float PontuacaoTest { get; set; }
 
     public ReadEntrevistaDto()
     {
     }
 
-    public Candidato Candidato { get => candidato; set => candidato = value; }
-    public string Cargo { get => cargo; set => cargo = value; }
-    public int Idade { get => idade; set => idade = value; }
-    public string FitCultral { get => fitCultral; set => fitCultral = value; }
-    public bool TesteFeito { get => testeFeito; set => testeFeito = value; }
-    public float PontuacaoTest { get => pontuacaoTest; set => pontuacaoTest = value; }
-    public DateTime HoraDaConsulta { get => horaDaConsulta; set => horaDaConsulta = value; }
 }

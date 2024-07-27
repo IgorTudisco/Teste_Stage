@@ -5,34 +5,20 @@ namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class UpdateEntrevistaDto
 {
-    [Required(ErrorMessage = "Campo candidato é obrigatório")]
-    private Candidato candidato;
+    public Candidato Candidato { get; set; }
 
-    [Required(ErrorMessage = "Campo cargo é obrigatório")]
-    private string cargo;
+    public string Cargo { get; set; }
 
-    [Required(ErrorMessage = "Campo idade é obrigatório")]
-    [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
-    private int idade;
+    public int Idade { get; set; }
 
-    [Required(ErrorMessage = "Campo fitCultral é obrigatório")]
-    private string fitCultral;
+    public string FitCultral { get; set; }
 
-    [Required(ErrorMessage = "Campo testeFeito é obrigatório")]
-    private bool testeFeito;
+    public bool TesteFeito { get; set; }
 
-    [Required(ErrorMessage = "Campo pontuacaoTest é obrigatório")]
-    [Range(0.01, 100.00, ErrorMessage = "O campo pontuacaoTest deve estar entre 0,01 e 100,00")]
-    private float pontuacaoTest;
+    public float PontuacaoTest { get; set; }
 
     public UpdateEntrevistaDto()
     {
     }
 
-    public Candidato Candidato { get => candidato; set => candidato = value; }
-    public string Cargo { get => cargo; set => cargo = value; }
-    public int Idade { get => idade; set => idade = value; }
-    public string FitCultral { get => fitCultral; set => fitCultral = value; }
-    public bool TesteFeito { get => testeFeito; set => testeFeito = value; }
-    public float PontuacaoTest { get => pontuacaoTest; set => pontuacaoTest = value; }
 }

@@ -9,7 +9,9 @@ public class CandidatoProfile : Profile
     public CandidatoProfile()
     {
         CreateMap<CreateCandidatoDto, Candidato>();
+
         CreateMap<Candidato, ReadCandidatoDto>();
+
         CreateMap<UpdateCandidatoDto, Candidato>();
     }
 }
