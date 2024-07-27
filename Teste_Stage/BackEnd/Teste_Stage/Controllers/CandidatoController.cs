@@ -49,7 +49,7 @@ public class CandidatoController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadCandidatoDto> RecuperaCandidatos([FromQuery] int skip = 0, [FromQuery] int take = 5)
     {
-        return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.ToList().Skip(skip).Take(take));
     }
 
     /// <summary>

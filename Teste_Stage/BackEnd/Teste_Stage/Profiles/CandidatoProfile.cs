@@ -10,7 +10,9 @@ public class CandidatoProfile : Profile
     {
         CreateMap<CreateCandidatoDto, Candidato>();
 
-        CreateMap<Candidato, ReadCandidatoDto>();
+        CreateMap<Candidato, ReadCandidatoDto>()
+            .ForMember(candidatoDto => candidatoDto.ReadEnderecoDto, opt =>
+            opt.MapFrom(candidato => candidato.Endereco));
 
         CreateMap<UpdateCandidatoDto, Candidato>();
     }

@@ -9,17 +9,17 @@ public class Entrevista
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Campo candidato é obrigatório")]
-    public Candidato Candidato { get; set; }
+    public int CandidatoId { get; set; }
 
     [Required(ErrorMessage = "Campo cargo é obrigatório")]
-    public String Cargo { get; set; }
+    public string Cargo { get; set; }
 
     [Required(ErrorMessage = "Campo idade é obrigatório")]
     [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
     public int Idade { get; set; }
 
     [Required(ErrorMessage = "Campo fitCultral é obrigatório")]
-    public String FitCultral { get; set; }
+    public string FitCultral { get; set; }
 
     [Required(ErrorMessage = "Campo testeFeito é obrigatório")]
     public Boolean TesteFeito { get; set; }

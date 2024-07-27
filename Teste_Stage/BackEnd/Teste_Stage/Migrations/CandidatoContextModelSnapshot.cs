@@ -9,7 +9,7 @@ using Teste_Stage.Data;
 namespace Teste_Stage.Migrations
 {
     [DbContext(typeof(CandidatoContext))]
-    partial class EntrevistaContextModelSnapshot : ModelSnapshot
+    partial class CandidatoContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -24,10 +24,6 @@ namespace Teste_Stage.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -37,7 +33,8 @@ namespace Teste_Stage.Migrations
 
                     b.Property<string>("Genero")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(1)
+                        .HasColumnType("varchar(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -46,6 +43,11 @@ namespace Teste_Stage.Migrations
                     b.Property<string>("NumeroContato")
                         .IsRequired()
                         .HasColumnType("longtext");
+
+                    b.Property<string>("descricao")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)");
 
                     b.HasKey("Id");
 
@@ -63,23 +65,28 @@ namespace Teste_Stage.Migrations
 
                     b.Property<string>("Cidade")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Estado")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Logradouro")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("Numero")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar(10)");
 
-                    b.Property<string>("Uf")
+                    b.Property<string>("UF")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(2)
+                        .HasColumnType("varchar(2)");
 
                     b.HasKey("Id");
 
@@ -114,8 +121,6 @@ namespace Teste_Stage.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CandidatoId");
-
                     b.ToTable("Entrevistas");
                 });
 
@@ -128,17 +133,6 @@ namespace Teste_Stage.Migrations
                         .IsRequired();
 
                     b.Navigation("Endereco");
-                });
-
-            modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
-                {
-                    b.HasOne("Teste_Stage.Models.Candidato", "Candidato")
-                        .WithMany()
-                        .HasForeignKey("CandidatoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Candidato");
                 });
 
             modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>

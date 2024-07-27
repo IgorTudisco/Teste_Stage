@@ -10,8 +10,8 @@ using Teste_Stage.Data;
 namespace Teste_Stage.Migrations
 {
     [DbContext(typeof(CandidatoContext))]
-    [Migration("20240726180041_CriandoTabelaDeEntrevista")]
-    partial class CriandoTabelaDeEntrevista
+    [Migration("20240727201903_Criando tabelas")]
+    partial class Criandotabelas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -26,17 +26,17 @@ namespace Teste_Stage.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Endereco")
+                    b.Property<int>("EnderecoId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Genero")
                         .IsRequired()
-                        .HasColumnType("longtext");
+                        .HasMaxLength(1)
+                        .HasColumnType("varchar(1)");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -46,9 +46,53 @@ namespace Teste_Stage.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<string>("descricao")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar(250)");
+
                     b.HasKey("Id");
 
-                    b.ToTable("Candidato");
+                    b.HasIndex("EnderecoId")
+                        .IsUnique();
+
+                    b.ToTable("Candidatos");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<string>("Cidade")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Estado")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Logradouro")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Numero")
+                        .IsRequired()
+                        .HasMaxLength(10)
+                        .HasColumnType("varchar(10)");
+
+                    b.Property<string>("UF")
+                        .IsRequired()
+                        .HasMaxLength(2)
+                        .HasColumnType("varchar(2)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Enderecos");
                 });
 
             modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
@@ -79,20 +123,24 @@ namespace Teste_Stage.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CandidatoId");
-
                     b.ToTable("Entrevistas");
                 });
 
-            modelBuilder.Entity("Teste_Stage.Models.Entrevista", b =>
+            modelBuilder.Entity("Teste_Stage.Models.Candidato", b =>
                 {
-                    b.HasOne("Teste_Stage.Models.Candidato", "Candidato")
-                        .WithMany()
-                        .HasForeignKey("CandidatoId")
+                    b.HasOne("Teste_Stage.Models.Endereco", "Endereco")
+                        .WithOne("Candidato")
+                        .HasForeignKey("Teste_Stage.Models.Candidato", "EnderecoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Candidato");
+                    b.Navigation("Endereco");
+                });
+
+            modelBuilder.Entity("Teste_Stage.Models.Endereco", b =>
+                {
+                    b.Navigation("Candidato")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -12,11 +12,7 @@ public class ReadCandidatoDto
 
     public string Email { get; set; }
 
-    public string Endereco { get; set; }
-
     public string Descricao { get; set; }
-
-    public int EnderecoId { get; set; }
 
     public ReadEnderecoDto ReadEnderecoDto { get; set; }
 

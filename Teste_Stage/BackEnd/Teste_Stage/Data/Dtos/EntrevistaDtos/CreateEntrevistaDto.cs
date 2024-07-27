@@ -4,7 +4,7 @@ namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class CreateEntrevistaDto
 {
-    public Candidato Candidato { get; set; }
+    public int CandidatoId { get; set; }
 
     public string Cargo { get; set; }
 
