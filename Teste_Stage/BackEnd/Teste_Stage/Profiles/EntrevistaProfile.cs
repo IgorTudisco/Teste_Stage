@@ -11,5 +11,6 @@ public class EntrevistaProfile : Profile
         CreateMap<CreateEntrevistaDto, Entrevista>();
         CreateMap<UpdateEntrevistaDto, Entrevista>();
         CreateMap<Entrevista, UpdateEntrevistaDto>();
+        CreateMap<Entrevista, ReadEntrevistaDto>();
     }
 }

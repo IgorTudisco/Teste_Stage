@@ -5,6 +5,10 @@ namespace Teste_Stage.Data.Dtos;
 
 public class CreateEntrevistaDto
 {
+    [Key]
+    [Required(ErrorMessage = "Campo id é obrigatório")]
+    private int id;
+
     [Required(ErrorMessage = "Campo candidato é obrigatório")]
     private Candidato candidato;
 
@@ -29,6 +33,7 @@ public class CreateEntrevistaDto
     {
     }
 
+    public int Id { get => id; set => id = value; }
     public Candidato Candidato { get => candidato; set => candidato = value; }
     public string Cargo { get => cargo; set => cargo = value; }
     public int Idade { get => idade; set => idade = value; }

@@ -45,3 +45,5 @@ C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\D
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\bin\Debug\net6.0\Teste_Stage.xml
+C:\Users\igort\Desktop\Teste_Stage\Projeto\Teste_Stage\BackEnd\Teste_Stage\obj\Debug\net6.0\Teste_Stage.xml

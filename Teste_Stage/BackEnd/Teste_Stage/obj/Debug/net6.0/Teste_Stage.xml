@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Teste_Stage</name>
+    </assembly>
+    <members>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.CadastrarEntrevista(Teste_Stage.Data.Dtos.CreateEntrevistaDto)">
+            <summary>
+            Adiciona um entrevista ao banco de dados
+            </summary>
+            <param name="entrevistaDto">Objeto com os campos necessários para criação de um entrevista</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.RecuperaEntrevistas(System.Int32,System.Int32)">
+            <summary>
+            Retorna uma lista de entrevistas. Você pode escolher a quantidade de elementos nessa lista.
+            </summary>
+            <param name="skip">Número de elementos a pular</param>
+            <param name="take">Número de elementos a retornar</param>
+            <returns>IActionResult</returns>
+            <response code="201">Caso inserção seja feita com sucesso</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.AchaEntrevistaPorId(System.Int32)">
+            <summary>
+            Retorna uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser encontrada</param>
+            <returns>IActionResult contendo a entrevista encontrada ou um status de NotFound se a entrevista não existir</returns>
+            <response code="200">Retorna a entrevista encontrada</response>
+            <response code="404">Se a entrevista não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.AtualizaEntrevista(System.Int32,Teste_Stage.Data.Dtos.UpdateEntrevistaDto)">
+            <summary>
+            Atualiza uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser atualizada</param>
+            <param name="entrevistaDto">Objeto contendo os dados atualizados da entrevista</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a atualização for bem-sucedida</response>
+            <response code="404">Se a entrevista não for encontrada</response>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.DeleteEntrevista(System.Int32)">
+            <summary>
+            Deleta uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser deletada</param>
+            <returns>IActionResult indicando o resultado da operação</returns>
+            <response code="204">Se a exclusão for bem-sucedida</response>
+            <response code="404">Se a entrevista não for encontrada</response>
+        </member>
+    </members>
+</doc>

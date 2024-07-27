@@ -3,29 +3,23 @@ using Teste_Stage.Models;
 
 namespace Teste_Stage.Data.Dtos;
 
-public class UpdateEntrevistaDto
+public class ReadEntrevistaDto
 {
-    [Required(ErrorMessage = "Campo candidato é obrigatório")]
     private Candidato candidato;
 
-    [Required(ErrorMessage = "Campo cargo é obrigatório")]
     private String cargo;
 
-    [Required(ErrorMessage = "Campo idade é obrigatório")]
-    [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
     private int idade;
 
-    [Required(ErrorMessage = "Campo fitCultral é obrigatório")]
     private String fitCultral;
 
-    [Required(ErrorMessage = "Campo testeFeito é obrigatório")]
     private Boolean testeFeito;
 
-    [Required(ErrorMessage = "Campo pontuacaoTest é obrigatório")]
-    [Range(0.01, 100.00, ErrorMessage = "O campo pontuacaoTest deve estar entre 0,01 e 100,00")]
     private float pontuacaoTest;
 
-    public UpdateEntrevistaDto()
+    private DateTime horaDaConsulta = DateTime.Now;
+
+    public ReadEntrevistaDto()
     {
     }
 
@@ -35,4 +29,5 @@ public class UpdateEntrevistaDto
     public string FitCultral { get => fitCultral; set => fitCultral = value; }
     public bool TesteFeito { get => testeFeito; set => testeFeito = value; }
     public float PontuacaoTest { get => pontuacaoTest; set => pontuacaoTest = value; }
+    public DateTime HoraDaConsulta { get => horaDaConsulta; set => horaDaConsulta = value; }
 }
