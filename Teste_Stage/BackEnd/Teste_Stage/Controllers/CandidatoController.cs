@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Castle.Core.Internal;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.CandidatoDtos;
 using Teste_Stage.Models;
@@ -86,6 +88,27 @@ public class CandidatoController : ControllerBase
     {
         var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);
         if (candidato == null) return NotFound();
+
+        if (candidato.EnderecoId != candidatoDto.EnderecoId)
+        {
+            var candidatoEndereco = _context.Candidatos.FirstOrDefault(candidato => candidato.EnderecoId == candidatoDto.EnderecoId);
+            if (candidatoEndereco != null)
+            {
+                return BadRequest(candidatoEndereco.EnderecoId);
+                // return BadRequest("Id endereço invalido " + candidatoEndereco.EnderecoId);
+            }
+            else
+            {
+                // Achando o id de "enderecoId" para atualizar para um endereço não nulo.
+                var endereco = _context.Enderecos.Where(endereco => endereco.Id == candidatoDto.EnderecoId).ToList();
+                if (endereco.IsNullOrEmpty()) return NotFound();
+            }
+        }
+
+        // Achando o id de "entrevistaId" para atualizar para uma entrevista não nulo.
+        var entrevista = _context.Entrevistas.Where(entrevista => entrevista.Id == candidatoDto.EntrevistaId).ToList();
+        if (entrevista.IsNullOrEmpty()) return NotFound();
+
         _mapper.Map(candidatoDto, candidato);
         _context.SaveChanges();
         return NoContent();

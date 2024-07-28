@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 
 namespace Teste_Stage.Models;
 
@@ -24,6 +25,7 @@ public class Endereco
     public string UF { get; set; }
 
     // Relacionamento com Candidato
+    [JsonIgnore]
     public virtual Candidato Candidato { get; set; }
 
     public Endereco()

@@ -105,7 +105,14 @@ public class EnderecoController : ControllerBase
     {
         var endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
         if (endereco == null) return NotFound();
-        _context.Remove(endereco);
+
+        // Desassocia os candidatos do endereço
+        var candidatos = _context.Candidatos.Where(candidatos => candidatos.EnderecoId == id).ToList();
+        foreach (var candidato in candidatos)
+            candidato.EnderecoId = null;
+        _context.SaveChanges();
+
+        _context.Enderecos.Remove(endereco);
         _context.SaveChanges();
         return NoContent();
     }

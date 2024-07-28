@@ -105,7 +105,15 @@ public class EntrevistaController : ControllerBase
     {
         var entrevista = _context.Entrevistas.FirstOrDefault(entrevista => entrevista.Id == id);
         if (entrevista == null) return NotFound();
-        _context.Remove(entrevista);
+
+        // Desassocia os candidatos da entrevista
+        var candidatos = _context.Candidatos.Where(candidatos => candidatos.EntrevistaId == id).ToList();
+        foreach (Candidato candidato in candidatos)
+            candidato.EntrevistaId = null;
+        _context.SaveChanges();
+
+
+        _context.Entrevistas.Remove(entrevista);
         _context.SaveChanges();
         return NoContent();
     }

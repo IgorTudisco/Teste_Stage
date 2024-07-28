@@ -40,6 +40,7 @@ public class Candidato
     // Relacionamento com Endereço
     public int? EnderecoId { get; set; }
 
+    [JsonIgnore]
     public virtual Endereco Endereco { get; set; }
 
     public Candidato()

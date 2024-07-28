@@ -24,6 +24,7 @@ public class Entrevista
     public float PontuacaoTest { get; set; }
 
     // Relacionamento com Candidato
+    [JsonIgnore]
     public virtual ICollection<Candidato> Candidato { get; set; }
 
     public Entrevista()
