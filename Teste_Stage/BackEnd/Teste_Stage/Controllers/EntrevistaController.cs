@@ -50,7 +50,7 @@ public class EntrevistaController : ControllerBase
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip = 0,[FromQuery] int take = 5)
+    public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip,[FromQuery] int take)
     {
         return _entrevistaService.RecuperaEntrevistasService(skip, take);
     }
@@ -67,14 +67,14 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AchaEntrevistaPorId(int id)
     {
-        var entrevistaIdAchada = _entrevistaService.AchaEntrevistaPorIdService(id);
-        if (entrevistaIdAchada == null)
+        var entrevistaRetornada = _entrevistaService.AchaEntrevistaPorIdService(id);
+        if (entrevistaRetornada == null)
         {
             return NotFound();
         }
         else
         {
-            return Ok(entrevistaIdAchada);
+            return Ok(entrevistaRetornada);
         }
     }
 

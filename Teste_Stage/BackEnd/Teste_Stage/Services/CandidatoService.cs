@@ -6,17 +6,30 @@ using Teste_Stage.Models;
 
 namespace Teste_Stage.Services;
 
+/// <summary>
+/// Serviço responsável por gerenciar as operações relacionadas a candidatos.
+/// </summary>
 public class CandidatoService
 {
     private CandidatoContext _context;
     private IMapper _mapper;
 
+    /// <summary>
+    /// Inicializa uma nova instância do serviço de candidatos.
+    /// </summary>
+    /// <param name="context">Contexto do banco de dados.</param>
+    /// <param name="mapper">Mapper para conversão de objetos DTO.</param>
     public CandidatoService(CandidatoContext context, IMapper mapper)
     {
         _context = context;
         _mapper = mapper;
     }
 
+    /// <summary>
+    /// Verifica se um endereço ID já está associado a um candidato existente.
+    /// </summary>
+    /// <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+    /// <returns>Retorna "ok" se o endereço ID não estiver duplicado, caso contrário, retorna null.</returns>
     public string? VerificaEnderecoIdDuplicado(CreateCandidatoDto candidatoDto)
     {
         // Verifica se tem algum id de "enderecoId" já cadastrado para evitar a duplicidade.
@@ -31,6 +44,11 @@ public class CandidatoService
         }
     }
 
+    /// <summary>
+    /// Verifica se os IDs fornecidos no DTO não são nulos.
+    /// </summary>
+    /// <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+    /// <returns>Retorna "ok" se os IDs não forem nulos, caso contrário, retorna null.</returns>
     public string? VerificaIdNullo(CreateCandidatoDto candidatoDto)
     {
         // Achando o id de "enderecoId" para que ele não atualize como nulo.
@@ -44,6 +62,11 @@ public class CandidatoService
         return "ok";
     }
 
+    /// <summary>
+    /// Cadastra um novo candidato no banco de dados.
+    /// </summary>
+    /// <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+    /// <returns>Retorna o objeto candidato criado.</returns>
     public Candidato CadastrarCandidatoService(CreateCandidatoDto candidatoDto)
     {
 
@@ -54,11 +77,22 @@ public class CandidatoService
 
     }
 
+    /// <summary>
+    /// Recupera uma lista de candidatos com base nos parâmetros de paginação.
+    /// </summary>
+    /// <param name="skip">Número de elementos a pular.</param>
+    /// <param name="take">Número de elementos a retornar.</param>
+    /// <returns>Retorna uma lista de candidatos.</returns>
     public IEnumerable<ReadCandidatoDto> RecuperaCandidatosService(int skip = 0, int take = 5)
     {
         return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.ToList().Skip(skip).Take(take));
     }
 
+    /// <summary>
+    /// Encontra um candidato específico com base no ID fornecido.
+    /// </summary>
+    /// <param name="id">ID do candidato a ser encontrado.</param>
+    /// <returns>Retorna o objeto DTO do candidato encontrado ou null se não encontrado.</returns>
     public ReadCandidatoDto? AchaCandidatoPorIdService(int id)
     {
         var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);
@@ -68,6 +102,12 @@ public class CandidatoService
         return candidatoDto;
     }
 
+    /// <summary>
+    /// Atualiza as informações de um candidato específico com base no ID fornecido.
+    /// </summary>
+    /// <param name="id">ID do candidato a ser atualizado.</param>
+    /// <param name="candidatoDto">Objeto DTO de atualização de candidato.</param>
+    /// <returns>Retorna 0 se a atualização for bem-sucedida, 1 se o endereço ID for inválido, e null se o candidato não for encontrado.</returns>
     public int? AtualizaCandidatoService(int id, UpdateCandidatoDto candidatoDto)
     {
         // Verifica se tem um candidato para ser atualizado com base no id informado.
@@ -99,6 +139,11 @@ public class CandidatoService
         return 0;
     }
 
+    /// <summary>
+    /// Deleta um candidato específico com base no ID fornecido.
+    /// </summary>
+    /// <param name="id">ID do candidato a ser deletado.</param>
+    /// <returns>Retorna o objeto candidato deletado ou null se não encontrado.</returns>
     public Candidato? DeleteCandidatoService(int id)
     {
         var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);

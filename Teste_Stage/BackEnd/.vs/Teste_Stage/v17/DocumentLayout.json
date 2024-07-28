@@ -5,10 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,22 +32,9 @@
               "RelativeDocumentMoniker": "Teste_Stage\\Services\\CandidatoService.cs",
               "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\CandidatoService.cs",
               "RelativeToolTip": "Teste_Stage\\Services\\CandidatoService.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAUwCQAAAAIAAAA",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAAAFUAAABLAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:25:27.768Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CandidatoController.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\CandidatoController.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
-              "RelativeToolTip": "Teste_Stage\\Controllers\\CandidatoController.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAUwC0AAABhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T18:25:24.77Z",
+              "WhenOpened": "2024-07-28T22:08:05.559Z",
               "EditorCaption": ""
             }
           ]

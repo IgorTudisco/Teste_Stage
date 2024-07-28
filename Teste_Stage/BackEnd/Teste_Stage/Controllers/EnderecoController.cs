@@ -45,7 +45,7 @@ public class EnderecoController : ControllerBase
     /// <response code="200">Caso a lista seja retornada com sucesso.</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadEnderecoDto> RecuperaEnderecos([FromQuery] int skip = 0, [FromQuery] int take = 5)
+    public IEnumerable<ReadEnderecoDto> RecuperaEnderecos([FromQuery] int skip, [FromQuery] int take)
     {
         return _enderecoService.RecuperaEnderecosService(skip, take);
     }
@@ -62,14 +62,14 @@ public class EnderecoController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AchaEnderecoPorId(int id)
     {
-        var enderecoDtoEncontrado = _enderecoService.AchaEnderecoPorIdService(id);
-        if (enderecoDtoEncontrado == null)
+        var enderecoRetornado = _enderecoService.AchaEnderecoPorIdService(id);
+        if (enderecoRetornado == null)
         {
             return NotFound();
         }
         else
         {
-            return Ok(enderecoDtoEncontrado);
+            return Ok(enderecoRetornado);
         }
     }
 
