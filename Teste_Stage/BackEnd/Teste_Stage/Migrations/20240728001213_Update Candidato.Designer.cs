@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Teste_Stage.Data;
 
@@ -10,9 +11,10 @@ using Teste_Stage.Data;
 namespace Teste_Stage.Migrations
 {
     [DbContext(typeof(CandidatoContext))]
-    partial class CandidatoContextModelSnapshot : ModelSnapshot
+    [Migration("20240728001213_Update Candidato")]
+    partial class UpdateCandidato
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -131,8 +133,7 @@ namespace Teste_Stage.Migrations
                 {
                     b.HasOne("Teste_Stage.Models.Endereco", "Endereco")
                         .WithOne("Candidato")
-                        .HasForeignKey("Teste_Stage.Models.Candidato", "EnderecoId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .HasForeignKey("Teste_Stage.Models.Candidato", "EnderecoId");
 
                     b.HasOne("Teste_Stage.Models.Entrevista", "Entrevista")
                         .WithMany("Candidato")

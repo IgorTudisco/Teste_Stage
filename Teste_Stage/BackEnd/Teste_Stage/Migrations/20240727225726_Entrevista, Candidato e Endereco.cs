@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Teste_Stage.Migrations
 {
-    public partial class Criandotabelas : Migration
+    public partial class EntrevistaCandidatoeEndereco : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -41,10 +41,8 @@ namespace Teste_Stage.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    CandidatoId = table.Column<int>(type: "int", nullable: false),
                     Cargo = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Idade = table.Column<int>(type: "int", nullable: false),
                     FitCultral = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     TesteFeito = table.Column<bool>(type: "tinyint(1)", nullable: false),
@@ -66,13 +64,15 @@ namespace Teste_Stage.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Genero = table.Column<string>(type: "varchar(1)", maxLength: 1, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
+                    Idade = table.Column<int>(type: "int", nullable: false),
                     NumeroContato = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Email = table.Column<string>(type: "longtext", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     descricao = table.Column<string>(type: "varchar(250)", maxLength: 250, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    EnderecoId = table.Column<int>(type: "int", nullable: false)
+                    EnderecoId = table.Column<int>(type: "int", nullable: true),
+                    EntrevistaId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -81,6 +81,11 @@ namespace Teste_Stage.Migrations
                         name: "FK_Candidatos_Enderecos_EnderecoId",
                         column: x => x.EnderecoId,
                         principalTable: "Enderecos",
+                        principalColumn: "Id");
+                    table.ForeignKey(
+                        name: "FK_Candidatos_Entrevistas_EntrevistaId",
+                        column: x => x.EntrevistaId,
+                        principalTable: "Entrevistas",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 })
@@ -91,6 +96,11 @@ namespace Teste_Stage.Migrations
                 table: "Candidatos",
                 column: "EnderecoId",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Candidatos_EntrevistaId",
+                table: "Candidatos",
+                column: "EntrevistaId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -99,10 +109,10 @@ namespace Teste_Stage.Migrations
                 name: "Candidatos");
 
             migrationBuilder.DropTable(
-                name: "Entrevistas");
+                name: "Enderecos");
 
             migrationBuilder.DropTable(
-                name: "Enderecos");
+                name: "Entrevistas");
         }
     }
 }

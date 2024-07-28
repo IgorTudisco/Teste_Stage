@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Teste_Stage.Models;
 
@@ -15,6 +17,10 @@ public class Candidato
     [MaxLength(1, ErrorMessage = "O tamanho da description não pode passar de 1 caracteres")]
     public String Genero { get; set; }
 
+    [Required(ErrorMessage = "Campo idade é obrigatório")]
+    [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
+    public int Idade { get; set; }
+
     [Required(ErrorMessage = "Campo numeroContato é obrigatório")]
     public String NumeroContato { get; set; }
 
@@ -25,7 +31,14 @@ public class Candidato
     [MaxLength(250, ErrorMessage = "O tamanho da description não pode passar de 250 caracteres")]
     public string descricao { get; set; }
 
-    public int EnderecoId { get; set; }
+    // Relacionamento com Entrevista
+    public int? EntrevistaId { get; set; }
+
+    [JsonIgnore]
+    public virtual Entrevista Entrevista { get; set; }
+
+    // Relacionamento com Endereço
+    public int? EnderecoId { get; set; }
 
     public virtual Endereco Endereco { get; set; }
 

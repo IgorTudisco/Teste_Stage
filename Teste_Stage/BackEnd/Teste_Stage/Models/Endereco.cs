@@ -23,6 +23,7 @@ public class Endereco
     [MaxLength(2, ErrorMessage = "O tamanho da UF não pode passar de 1 caracteres")]
     public string UF { get; set; }
 
+    // Relacionamento com Candidato
     public virtual Candidato Candidato { get; set; }
 
     public Endereco()

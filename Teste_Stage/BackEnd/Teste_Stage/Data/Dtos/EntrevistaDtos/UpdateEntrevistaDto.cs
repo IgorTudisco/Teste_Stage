@@ -5,11 +5,7 @@ namespace Teste_Stage.Data.Dtos.EntrevistaDtos;
 
 public class UpdateEntrevistaDto
 {
-    public int CandidatoId { get; set; }
-
     public string Cargo { get; set; }
-
-    public int Idade { get; set; }
 
     public string FitCultral { get; set; }
 

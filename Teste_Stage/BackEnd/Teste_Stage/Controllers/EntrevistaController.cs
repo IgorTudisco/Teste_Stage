@@ -48,7 +48,7 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip = 0,[FromQuery] int take = 5)
     {
-        return _mapper.Map<List<ReadEntrevistaDto>>(_context.Entrevistas.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadEntrevistaDto>>(_context.Entrevistas.Skip(skip).Take(take).ToList());
     }
 
     /// <summary>

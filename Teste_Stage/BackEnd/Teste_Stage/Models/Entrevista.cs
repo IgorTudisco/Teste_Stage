@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Runtime.Serialization;
+using System.Text.Json.Serialization;
 
 namespace Teste_Stage.Models;
 
@@ -8,15 +10,8 @@ public class Entrevista
     [Required(ErrorMessage = "Campo id é obrigatório")]
     public int Id { get; set; }
 
-    [Required(ErrorMessage = "Campo candidato é obrigatório")]
-    public int CandidatoId { get; set; }
-
     [Required(ErrorMessage = "Campo cargo é obrigatório")]
     public string Cargo { get; set; }
-
-    [Required(ErrorMessage = "Campo idade é obrigatório")]
-    [Range(0.01, 100.00, ErrorMessage = "O campo idade deve estar entre 0,01 e 1.000.000,00")]
-    public int Idade { get; set; }
 
     [Required(ErrorMessage = "Campo fitCultral é obrigatório")]
     public string FitCultral { get; set; }
@@ -27,6 +22,9 @@ public class Entrevista
     [Required(ErrorMessage = "Campo pontuacaoTest é obrigatório")]
     [Range(0.01, 100.00, ErrorMessage = "O campo pontuacaoTest deve estar entre 0,01 e 100,00")]
     public float PontuacaoTest { get; set; }
+
+    // Relacionamento com Candidato
+    public virtual ICollection<Candidato> Candidato { get; set; }
 
     public Entrevista()
     {

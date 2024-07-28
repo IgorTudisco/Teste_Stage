@@ -6,6 +6,8 @@ public class UpdateCandidatoDto
 
     public string Genero { get; set; }
 
+    public int Idade { get; set; }
+
     public string NumeroContato { get; set; }
 
     public string Email { get; set; }
@@ -13,6 +15,8 @@ public class UpdateCandidatoDto
     public string Descricao { get; set; }
 
     public int EnderecoId { get; set; }
+
+    public int EntrevistaId { get; set; }
 
     public UpdateCandidatoDto()
     {

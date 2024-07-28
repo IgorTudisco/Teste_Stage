@@ -11,6 +11,9 @@ public class EntrevistaProfile : Profile
         CreateMap<CreateEntrevistaDto, Entrevista>();
         CreateMap<UpdateEntrevistaDto, Entrevista>();
         CreateMap<Entrevista, UpdateEntrevistaDto>();
-        CreateMap<Entrevista, ReadEntrevistaDto>();
+        CreateMap<Entrevista, ReadEntrevistaDto>()
+            .ForMember(entrevistaDto => entrevistaDto.ReadCandidatoDto, opt =>
+            opt.MapFrom(entrevista => entrevista.Candidato))
+            ;
     }
 }
