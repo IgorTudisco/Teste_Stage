@@ -4,50 +4,64 @@
         <name>Teste_Stage</name>
     </assembly>
     <members>
+        <member name="T:Teste_Stage.Controllers.CandidatoController">
+            <summary>
+            Controlador para gerenciar as operações relacionadas a candidatos.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Controllers.CandidatoController.#ctor(Teste_Stage.Services.CandidatoService)">
+            <summary>
+            Inicializa uma nova instância do controlador de candidatos.
+            </summary>
+            <param name="candidatoService">Serviço utilizado para operações de candidatos.</param>
+        </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.CadastrarCandidato(Teste_Stage.Data.Dtos.CandidatoDtos.CreateCandidatoDto)">
             <summary>
-            Adiciona um candidato ao banco de dados
+            Adiciona um novo candidato ao banco de dados.
             </summary>
-            <param name="candidatoDto">Objeto com os campos necessários para criação de um candidato</param>
-            <returns>IActionResult</returns>
-            <response code="201">Caso inserção seja feita com sucesso</response>
+            <param name="candidatoDto">Objeto contendo os dados necessários para criar um novo candidato.</param>
+            <returns>Retorna um status HTTP indicando o resultado da operação.</returns>
+            <response code="201">Se o candidato for criado com sucesso.</response>
+            <response code="400">Se o endereço fornecido for inválido ou já existir.</response>
+            <response code="404">Se algum dos IDs fornecidos no DTO for nulo.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.RecuperaCandidatos(System.Int32,System.Int32)">
             <summary>
-            Retorna uma lista de candidatos. Você pode escolher a quantidade de elementos nessa lista.
+            Retorna uma lista de candidatos com base na quantidade e na paginação.
             </summary>
-            <param name="skip">Número de elementos a pular</param>
-            <param name="take">Número de elementos a retornar</param>
-            <returns>IActionResult</returns>
-            <response code="201">Caso inserção seja feita com sucesso</response>
+            <param name="skip">Número de elementos a pular na lista de candidatos.</param>
+            <param name="take">Número de elementos a retornar.</param>
+            <returns>Uma lista de candidatos.</returns>
+            <response code="200">Retorna a lista de candidatos solicitada.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.AchaCandidatoPorId(System.Int32)">
             <summary>
-            Retorna uma candidato específica com base no ID fornecido.
+            Retorna um candidato específico com base no ID fornecido.
             </summary>
-            <param name="id">ID da candidato a ser encontrada</param>
-            <returns>IActionResult contendo a candidato encontrada ou um status de NotFound se a candidato não existir</returns>
-            <response code="200">Retorna a candidato encontrada</response>
-            <response code="404">Se a candidato não for encontrada</response>
+            <param name="id">ID do candidato a ser retornado.</param>
+            <returns>O candidato correspondente ao ID fornecido ou um status HTTP de NotFound se o candidato não existir.</returns>
+            <response code="200">Retorna o candidato encontrado.</response>
+            <response code="404">Se o candidato com o ID fornecido não for encontrado.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.AtualizaCandidato(System.Int32,Teste_Stage.Data.Dtos.CandidatoDtos.UpdateCandidatoDto)">
             <summary>
-            Atualiza um candidato específica com base no ID fornecido.
+            Atualiza as informações de um candidato específico com base no ID fornecido.
             </summary>
-            <param name="id">ID do candidato a ser atualizada</param>
-            <param name="candidatoDto">Objeto contendo os dados atualizados do candidato</param>
-            <returns>IActionResult indicando o resultado da operação</returns>
-            <response code="204">Se a atualização for bem-sucedida</response>
-            <response code="404">Se a candidato não for encontrada</response>
+            <param name="id">ID do candidato a ser atualizado.</param>
+            <param name="candidatoDto">Objeto contendo os dados atualizados do candidato.</param>
+            <returns>Um status HTTP indicando o resultado da operação.</returns>
+            <response code="204">Se a atualização for bem-sucedida.</response>
+            <response code="400">Se o endereço fornecido for inválido.</response>
+            <response code="404">Se o candidato com o ID fornecido não for encontrado.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.DeleteCandidato(System.Int32)">
             <summary>
-            Deleta um candidato específica com base no ID fornecido.
+            Deleta um candidato específico com base no ID fornecido.
             </summary>
-            <param name="id">ID do candidato a ser deletada</param>
-            <returns>IActionResult indicando o resultado da operação</returns>
-            <response code="204">Se a exclusão for bem-sucedida</response>
-            <response code="404">Se o candidato não for encontrada</response>
+            <param name="id">ID do candidato a ser deletado.</param>
+            <returns>Um status HTTP indicando o resultado da operação.</returns>
+            <response code="204">Se a exclusão for bem-sucedida.</response>
+            <response code="404">Se o candidato com o ID fornecido não for encontrado.</response>
         </member>
         <member name="T:Teste_Stage.Controllers.EnderecoController">
             <summary>
@@ -160,6 +174,69 @@
             <returns>IActionResult indicando o resultado da operação</returns>
             <response code="204">Se a exclusão for bem-sucedida</response>
             <response code="404">Se a entrevista não for encontrada</response>
+        </member>
+        <member name="T:Teste_Stage.Services.CandidatoService">
+            <summary>
+            Serviço responsável por gerenciar as operações relacionadas a candidatos.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.#ctor(Teste_Stage.Data.CandidatoContext,AutoMapper.IMapper)">
+            <summary>
+            Inicializa uma nova instância do serviço de candidatos.
+            </summary>
+            <param name="context">Contexto do banco de dados.</param>
+            <param name="mapper">Mapper para conversão de objetos DTO.</param>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.VerificaEnderecoIdDuplicado(Teste_Stage.Data.Dtos.CandidatoDtos.CreateCandidatoDto)">
+            <summary>
+            Verifica se um endereço ID já está associado a um candidato existente.
+            </summary>
+            <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+            <returns>Retorna "ok" se o endereço ID não estiver duplicado, caso contrário, retorna null.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.VerificaIdNullo(Teste_Stage.Data.Dtos.CandidatoDtos.CreateCandidatoDto)">
+            <summary>
+            Verifica se os IDs fornecidos no DTO não são nulos.
+            </summary>
+            <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+            <returns>Retorna "ok" se os IDs não forem nulos, caso contrário, retorna null.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.CadastrarCandidatoService(Teste_Stage.Data.Dtos.CandidatoDtos.CreateCandidatoDto)">
+            <summary>
+            Cadastra um novo candidato no banco de dados.
+            </summary>
+            <param name="candidatoDto">Objeto DTO de criação de candidato.</param>
+            <returns>Retorna o objeto candidato criado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.RecuperaCandidatosService(System.Int32,System.Int32)">
+            <summary>
+            Recupera uma lista de candidatos com base nos parâmetros de paginação.
+            </summary>
+            <param name="skip">Número de elementos a pular.</param>
+            <param name="take">Número de elementos a retornar.</param>
+            <returns>Retorna uma lista de candidatos.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.AchaCandidatoPorIdService(System.Int32)">
+            <summary>
+            Encontra um candidato específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do candidato a ser encontrado.</param>
+            <returns>Retorna o objeto DTO do candidato encontrado ou null se não encontrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.AtualizaCandidatoService(System.Int32,Teste_Stage.Data.Dtos.CandidatoDtos.UpdateCandidatoDto)">
+            <summary>
+            Atualiza as informações de um candidato específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do candidato a ser atualizado.</param>
+            <param name="candidatoDto">Objeto DTO de atualização de candidato.</param>
+            <returns>Retorna 0 se a atualização for bem-sucedida, 1 se o endereço ID for inválido, e null se o candidato não for encontrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.CandidatoService.DeleteCandidatoService(System.Int32)">
+            <summary>
+            Deleta um candidato específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do candidato a ser deletado.</param>
+            <returns>Retorna o objeto candidato deletado ou null se não encontrado.</returns>
         </member>
         <member name="T:Teste_Stage.Services.EnderecoService">
             <summary>
