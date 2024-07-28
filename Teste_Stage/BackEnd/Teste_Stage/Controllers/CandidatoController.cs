@@ -1,10 +1,8 @@
-﻿using AutoMapper;
-using Castle.Core.Internal;
+﻿using Castle.Core.Internal;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.CandidatoDtos;
 using Teste_Stage.Models;
+using Teste_Stage.Services;
 
 namespace Teste_Stage.Controllers;
 
@@ -13,13 +11,11 @@ namespace Teste_Stage.Controllers;
 public class CandidatoController : ControllerBase
 {
 
-    private CandidatoContext _context;
-    private IMapper _mapper;
+    private CandidatoService _candidatoService;
 
-    public CandidatoController(CandidatoContext context, IMapper mapper)
+    public CandidatoController(CandidatoService candidatoService)
     {
-        _context = context;
-        _mapper = mapper;
+        _candidatoService = candidatoService;
     }
 
     /// <summary>
@@ -32,11 +28,23 @@ public class CandidatoController : ControllerBase
     [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult CadastrarCandidato([FromBody] CreateCandidatoDto candidatoDto)
     {
+        var serviceCandidato = _candidatoService;
+        
+        string? verificaEnderecoIdDuplicado = serviceCandidato.VerificaEnderecoIdDuplicado(candidatoDto);
+        string? verificaIdNull = serviceCandidato.VerificaIdNullo(candidatoDto);
 
-        Candidato candidato = _mapper.Map<Candidato>(candidatoDto);
-        _context.Candidatos.Add(candidato);
-        _context.SaveChanges();
-        return CreatedAtAction(nameof(AchaCandidatoPorId), new { id = candidato.Id }, candidato);
+        if (verificaEnderecoIdDuplicado.IsNullOrEmpty())
+        {
+            return BadRequest(candidatoDto.EnderecoId);
+        }
+
+        if (verificaIdNull.IsNullOrEmpty())
+        {
+            return NotFound();
+        }
+
+        Candidato candidatoCadastrado = serviceCandidato.CadastrarCandidatoService(candidatoDto);
+        return CreatedAtAction(nameof(AchaCandidatoPorId), new { id = candidatoCadastrado.Id }, candidatoCadastrado);
 
     }
 
@@ -49,9 +57,9 @@ public class CandidatoController : ControllerBase
     /// <response code="201">Caso inserção seja feita com sucesso</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadCandidatoDto> RecuperaCandidatos([FromQuery] int skip = 0, [FromQuery] int take = 5)
+    public IEnumerable<ReadCandidatoDto> RecuperaCandidatos([FromQuery] int skip, [FromQuery] int take)
     {
-        return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.ToList().Skip(skip).Take(take));
+        return _candidatoService.RecuperaCandidatosService(skip, take);
     }
 
     /// <summary>
@@ -66,11 +74,15 @@ public class CandidatoController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AchaCandidatoPorId(int id)
     {
-        var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);
-        if (candidato == null)
+        var candidatoAcado = _candidatoService.AchaCandidatoPorIdService(id);
+        if (candidatoAcado == null)
+        {
             return NotFound();
-        var candidatoDto = _mapper.Map<ReadCandidatoDto>(candidato);
-        return Ok(candidatoDto);
+        }
+        else
+        {
+            return Ok(candidatoAcado);
+        }
     }
 
     /// <summary>
@@ -86,32 +98,18 @@ public class CandidatoController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AtualizaCandidato(int id, [FromBody] UpdateCandidatoDto candidatoDto)
     {
-        var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);
-        if (candidato == null) return NotFound();
+        var candidatoAtualizado = _candidatoService.AtualizaCandidatoService(id, candidatoDto);
 
-        if (candidato.EnderecoId != candidatoDto.EnderecoId)
+        switch (candidatoAtualizado)
         {
-            var candidatoEndereco = _context.Candidatos.FirstOrDefault(candidato => candidato.EnderecoId == candidatoDto.EnderecoId);
-            if (candidatoEndereco != null)
-            {
-                return BadRequest(candidatoEndereco.EnderecoId);
-                // return BadRequest("Id endereço invalido " + candidatoEndereco.EnderecoId);
-            }
-            else
-            {
-                // Achando o id de "enderecoId" para atualizar para um endereço não nulo.
-                var endereco = _context.Enderecos.Where(endereco => endereco.Id == candidatoDto.EnderecoId).ToList();
-                if (endereco.IsNullOrEmpty()) return NotFound();
-            }
+            case 0:
+                return NoContent();
+            case 1:
+                return BadRequest(candidatoDto.EnderecoId);
+            // return BadRequest("Id endereço invalido " + candidatoEndereco.EnderecoId);
+            default:
+                return NotFound();
         }
-
-        // Achando o id de "entrevistaId" para atualizar para uma entrevista não nulo.
-        var entrevista = _context.Entrevistas.Where(entrevista => entrevista.Id == candidatoDto.EntrevistaId).ToList();
-        if (entrevista.IsNullOrEmpty()) return NotFound();
-
-        _mapper.Map(candidatoDto, candidato);
-        _context.SaveChanges();
-        return NoContent();
     }
 
     /// <summary>
@@ -126,10 +124,14 @@ public class CandidatoController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult DeleteCandidato(int id)
     {
-        var candidato = _context.Candidatos.FirstOrDefault(candidato => candidato.Id == id);
-        if (candidato == null)return NotFound();
-        _context.Remove(candidato);
-        _context.SaveChanges();
-        return NoContent();
+        var candidatoDeletado = _candidatoService.DeleteCandidatoService(id);
+        if (candidatoDeletado == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return NoContent();
+        }
     }
 }

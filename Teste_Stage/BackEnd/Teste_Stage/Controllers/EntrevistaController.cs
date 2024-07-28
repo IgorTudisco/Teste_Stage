@@ -3,20 +3,26 @@ using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
+using Teste_Stage.Services;
 
 namespace Teste_Stage.Controllers;
 
+/// <summary>
+/// Controlador para gerenciar operações relacionadas a Entrevistas.
+/// </summary>
 [ApiController]
 [Route("[Controller]")]
 public class EntrevistaController : ControllerBase
 {
-    private CandidatoContext _context;
-    private IMapper _mapper;
+    private EntrevistaService _entrevistaService;
 
-    public EntrevistaController(CandidatoContext context, IMapper mapper)
+    /// <summary>
+    /// Construtor da classe EntrevistaController.
+    /// </summary>
+    /// <param name="entrevistaService">Instância do serviço de entrevistas.</param>
+    public EntrevistaController(EntrevistaService entrevistaService)
     {
-        _context = context;
-        _mapper = mapper;
+        _entrevistaService = entrevistaService;
     }
 
     /// <summary>
@@ -30,10 +36,8 @@ public class EntrevistaController : ControllerBase
     public IActionResult CadastrarEntrevista([FromBody] CreateEntrevistaDto entrevistaDto)
     {
 
-        Entrevista entrevista = _mapper.Map<Entrevista>(entrevistaDto);
-        _context.Entrevistas.Add(entrevista);
-        _context.SaveChanges();
-        return CreatedAtAction(nameof(AchaEntrevistaPorId), new { id = entrevista.Id }, entrevista);
+        Entrevista entrevistaCadastrada = _entrevistaService.CadastrarEntrevistaService(entrevistaDto);
+        return CreatedAtAction(nameof(AchaEntrevistaPorId), new { id = entrevistaCadastrada.Id }, entrevistaCadastrada);
 
     }
 
@@ -48,7 +52,7 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip = 0,[FromQuery] int take = 5)
     {
-        return _mapper.Map<List<ReadEntrevistaDto>>(_context.Entrevistas.Skip(skip).Take(take).ToList());
+        return _entrevistaService.RecuperaEntrevistasService(skip, take);
     }
 
     /// <summary>
@@ -63,11 +67,15 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AchaEntrevistaPorId(int id)
     {
-        var entrevista = _context.Entrevistas.FirstOrDefault(entrevista => entrevista.Id == id);
-        if (entrevista == null)
+        var entrevistaIdAchada = _entrevistaService.AchaEntrevistaPorIdService(id);
+        if (entrevistaIdAchada == null)
+        {
             return NotFound();
-        var entrevistaDto = _mapper.Map<ReadEntrevistaDto>(entrevista);
-        return Ok(entrevistaDto);
+        }
+        else
+        {
+            return Ok(entrevistaIdAchada);
+        }
     }
 
     /// <summary>
@@ -83,11 +91,15 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult AtualizaEntrevista(int id, [FromBody] UpdateEntrevistaDto entrevistaDto)
     {
-        var entrevista = _context.Entrevistas.FirstOrDefault(entrevista => entrevista.Id == id);
-        if (entrevista == null) return NotFound();
-        _mapper.Map(entrevistaDto, entrevista);
-        _context.SaveChanges();
-        return NoContent();
+        var entrevistaAtualizada = _entrevistaService.AtualizaEntrevistaService(id, entrevistaDto);
+        if (entrevistaAtualizada == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return NoContent();
+        }
     }
 
 
@@ -103,19 +115,15 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(404)]
     public IActionResult DeleteEntrevista(int id)
     {
-        var entrevista = _context.Entrevistas.FirstOrDefault(entrevista => entrevista.Id == id);
-        if (entrevista == null) return NotFound();
-
-        // Desassocia os candidatos da entrevista
-        var candidatos = _context.Candidatos.Where(candidatos => candidatos.EntrevistaId == id).ToList();
-        foreach (Candidato candidato in candidatos)
-            candidato.EntrevistaId = null;
-        _context.SaveChanges();
-
-
-        _context.Entrevistas.Remove(entrevista);
-        _context.SaveChanges();
-        return NoContent();
+        var entrevistaDeletada = _entrevistaService.DeleteEntrevistaService(id);
+        if (entrevistaDeletada == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return NoContent();
+        }
     }
 
 

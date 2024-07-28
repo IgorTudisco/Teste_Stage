@@ -1,120 +1,124 @@
-﻿using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data.Dtos.EnderecoDtos;
-using Teste_Stage.Data;
-using Teste_Stage.Models;
+using Teste_Stage.Services;
 
 namespace Teste_Stage.Controllers;
 
+/// <summary>
+/// Controlador para gerenciar operações relacionadas a Endereços.
+/// </summary>
 [ApiController]
 [Route("[Controller]")]
 public class EnderecoController : ControllerBase
 {
-    private CandidatoContext _context;
-    private IMapper _mapper;
+    private EnderecoService _enderecoService;
 
-    public EnderecoController(CandidatoContext context, IMapper mapper)
+    /// <summary>
+    /// Construtor da classe EnderecoController.
+    /// </summary>
+    /// <param name="enderecoService">Instância do serviço de endereços.</param>
+    public EnderecoController(EnderecoService enderecoService)
     {
-        _context = context;
-        _mapper = mapper;
+        _enderecoService = enderecoService;
     }
 
     /// <summary>
-    /// Adiciona um endereco ao banco de dados
+    /// Adiciona um endereço ao banco de dados.
     /// </summary>
-    /// <param name="enderecoDto">Objeto com os campos necessários para criação de um endereco</param>
-    /// <returns>IActionResult</returns>
-    /// <response code="201">Caso inserção seja feita com sucesso</response>
+    /// <param name="enderecoDto">Objeto com os campos necessários para criação de um endereço.</param>
+    /// <returns>IActionResult contendo o endereço criado.</returns>
+    /// <response code="201">Caso a inserção seja feita com sucesso.</response>
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     public IActionResult CadastrarEndereco([FromBody] CreateEnderecoDto enderecoDto)
     {
-
-        Endereco endereco = _mapper.Map<Endereco>(enderecoDto);
-        _context.Enderecos.Add(endereco);
-        _context.SaveChanges();
-        return CreatedAtAction(nameof(AchaEnderecoPorId), new { id = endereco.Id }, endereco);
-
+        var enderecoCadastrado = _enderecoService.CadastrarEnderecoService(enderecoDto);
+        return CreatedAtAction(nameof(AchaEnderecoPorId), new { id = enderecoCadastrado.Id }, enderecoCadastrado);
     }
 
     /// <summary>
-    /// Retorna uma lista de enderecos. Você pode escolher a quantidade de elementos nessa lista.
+    /// Retorna uma lista de endereços. Você pode escolher a quantidade de elementos nessa lista.
     /// </summary>
-    /// <param name="skip">Número de elementos a pular</param>
-    /// <param name="take">Número de elementos a retornar</param>
-    /// <returns>IActionResult</returns>
-    /// <response code="201">Caso inserção seja feita com sucesso</response>
+    /// <param name="skip">Número de elementos a pular.</param>
+    /// <param name="take">Número de elementos a retornar.</param>
+    /// <returns>IEnumerable contendo os endereços recuperados.</returns>
+    /// <response code="200">Caso a lista seja retornada com sucesso.</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadEnderecoDto> Recuperaenderecos([FromQuery] int skip = 0, [FromQuery] int take = 5)
+    public IEnumerable<ReadEnderecoDto> RecuperaEnderecos([FromQuery] int skip = 0, [FromQuery] int take = 5)
     {
-        return _mapper.Map<List<ReadEnderecoDto>>(_context.Enderecos.Skip(skip).Take(take));
+        return _enderecoService.RecuperaEnderecosService(skip, take);
     }
 
     /// <summary>
-    /// Retorna um endereco específica com base no ID fornecido.
+    /// Retorna um endereço específico com base no ID fornecido.
     /// </summary>
-    /// <param name="id">ID do endereco a ser encontrada</param>
-    /// <returns>IActionResult contendo o endereco encontrada ou um status de NotFound se o endereco não existir</returns>
-    /// <response code="200">Retorna a endereco encontrada</response>
-    /// <response code="404">Se a endereco não for encontrada</response>
+    /// <param name="id">ID do endereço a ser encontrado.</param>
+    /// <returns>IActionResult contendo o endereço encontrado ou um status de NotFound se o endereço não existir.</returns>
+    /// <response code="200">Retorna o endereço encontrado.</response>
+    /// <response code="404">Se o endereço não for encontrado.</response>
     [HttpGet("{id}")]
     [ProducesResponseType(typeof(ReadEnderecoDto), 200)]
     [ProducesResponseType(404)]
     public IActionResult AchaEnderecoPorId(int id)
     {
-        var endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
-        if (endereco == null)
+        var enderecoDtoEncontrado = _enderecoService.AchaEnderecoPorIdService(id);
+        if (enderecoDtoEncontrado == null)
+        {
             return NotFound();
-        var enderecoDto = _mapper.Map<ReadEnderecoDto>(endereco);
-        return Ok(enderecoDto);
+        }
+        else
+        {
+            return Ok(enderecoDtoEncontrado);
+        }
     }
 
     /// <summary>
-    /// Atualiza uma endereco específica com base no ID fornecido.
+    /// Atualiza um endereço específico com base no ID fornecido.
     /// </summary>
-    /// <param name="id">ID do endereco a ser atualizada</param>
-    /// <param name="enderecoDto">Objeto contendo os dados atualizados do endereco</param>
-    /// <returns>IActionResult indicando o resultado da operação</returns>
-    /// <response code="204">Se a atualização for bem-sucedida</response>
-    /// <response code="404">Se a endereco não for encontrada</response>
+    /// <param name="id">ID do endereço a ser atualizado.</param>
+    /// <param name="enderecoDto">Objeto contendo os dados atualizados do endereço.</param>
+    /// <returns>IActionResult indicando o resultado da operação.</returns>
+    /// <response code="204">Se a atualização for bem-sucedida.</response>
+    /// <response code="404">Se o endereço não for encontrado.</response>
     [HttpPut("{id}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     public IActionResult AtualizaEndereco(int id, [FromBody] UpdateEnderecoDto enderecoDto)
     {
-        var endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
-        if (endereco == null) return NotFound();
-        _mapper.Map(enderecoDto, endereco);
-        _context.SaveChanges();
-        return NoContent();
+        var enderecoAtualizado = _enderecoService.AtualizaEnderecoService(id, enderecoDto);
+        if (enderecoAtualizado == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return NoContent();
+        }
     }
 
 
     /// <summary>
-    /// Deleta uma endereco específica com base no ID fornecido.
+    /// Deleta um endereço específico com base no ID fornecido.
     /// </summary>
-    /// <param name="id">ID do endereco a ser deletada</param>
-    /// <returns>IActionResult indicando o resultado da operação</returns>
-    /// <response code="204">Se a exclusão for bem-sucedida</response>
-    /// <response code="404">Se o endereco não for encontrada</response>
+    /// <param name="id">ID do endereço a ser deletado.</param>
+    /// <returns>IActionResult indicando o resultado da operação.</returns>
+    /// <response code="204">Se a exclusão for bem-sucedida.</response>
+    /// <response code="404">Se o endereço não for encontrado.</response>
     [HttpDelete("{id}")]
     [ProducesResponseType(204)]
     [ProducesResponseType(404)]
     public IActionResult DeleteEndereco(int id)
     {
-        var endereco = _context.Enderecos.FirstOrDefault(endereco => endereco.Id == id);
-        if (endereco == null) return NotFound();
-
-        // Desassocia os candidatos do endereço
-        var candidatos = _context.Candidatos.Where(candidatos => candidatos.EnderecoId == id).ToList();
-        foreach (var candidato in candidatos)
-            candidato.EnderecoId = null;
-        _context.SaveChanges();
-
-        _context.Enderecos.Remove(endereco);
-        _context.SaveChanges();
-        return NoContent();
+        var enderecoDeletado = _enderecoService.DeleteEnderecoService(id);
+        if (enderecoDeletado == null)
+        {
+            return NotFound();
+        }
+        else
+        {
+            return NoContent();
+        }
     }
 
 }

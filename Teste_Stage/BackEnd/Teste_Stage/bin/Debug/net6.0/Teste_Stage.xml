@@ -49,50 +49,72 @@
             <response code="204">Se a exclusão for bem-sucedida</response>
             <response code="404">Se o candidato não for encontrada</response>
         </member>
+        <member name="T:Teste_Stage.Controllers.EnderecoController">
+            <summary>
+            Controlador para gerenciar operações relacionadas a Endereços.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EnderecoController.#ctor(Teste_Stage.Services.EnderecoService)">
+            <summary>
+            Construtor da classe EnderecoController.
+            </summary>
+            <param name="enderecoService">Instância do serviço de endereços.</param>
+        </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.CadastrarEndereco(Teste_Stage.Data.Dtos.EnderecoDtos.CreateEnderecoDto)">
             <summary>
-            Adiciona um endereco ao banco de dados
+            Adiciona um endereço ao banco de dados.
             </summary>
-            <param name="enderecoDto">Objeto com os campos necessários para criação de um endereco</param>
-            <returns>IActionResult</returns>
-            <response code="201">Caso inserção seja feita com sucesso</response>
+            <param name="enderecoDto">Objeto com os campos necessários para criação de um endereço.</param>
+            <returns>IActionResult contendo o endereço criado.</returns>
+            <response code="201">Caso a inserção seja feita com sucesso.</response>
         </member>
-        <member name="M:Teste_Stage.Controllers.EnderecoController.Recuperaenderecos(System.Int32,System.Int32)">
+        <member name="M:Teste_Stage.Controllers.EnderecoController.RecuperaEnderecos(System.Int32,System.Int32)">
             <summary>
-            Retorna uma lista de enderecos. Você pode escolher a quantidade de elementos nessa lista.
+            Retorna uma lista de endereços. Você pode escolher a quantidade de elementos nessa lista.
             </summary>
-            <param name="skip">Número de elementos a pular</param>
-            <param name="take">Número de elementos a retornar</param>
-            <returns>IActionResult</returns>
-            <response code="201">Caso inserção seja feita com sucesso</response>
+            <param name="skip">Número de elementos a pular.</param>
+            <param name="take">Número de elementos a retornar.</param>
+            <returns>IEnumerable contendo os endereços recuperados.</returns>
+            <response code="200">Caso a lista seja retornada com sucesso.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.AchaEnderecoPorId(System.Int32)">
             <summary>
-            Retorna um endereco específica com base no ID fornecido.
+            Retorna um endereço específico com base no ID fornecido.
             </summary>
-            <param name="id">ID do endereco a ser encontrada</param>
-            <returns>IActionResult contendo o endereco encontrada ou um status de NotFound se o endereco não existir</returns>
-            <response code="200">Retorna a endereco encontrada</response>
-            <response code="404">Se a endereco não for encontrada</response>
+            <param name="id">ID do endereço a ser encontrado.</param>
+            <returns>IActionResult contendo o endereço encontrado ou um status de NotFound se o endereço não existir.</returns>
+            <response code="200">Retorna o endereço encontrado.</response>
+            <response code="404">Se o endereço não for encontrado.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.AtualizaEndereco(System.Int32,Teste_Stage.Data.Dtos.EnderecoDtos.UpdateEnderecoDto)">
             <summary>
-            Atualiza uma endereco específica com base no ID fornecido.
+            Atualiza um endereço específico com base no ID fornecido.
             </summary>
-            <param name="id">ID do endereco a ser atualizada</param>
-            <param name="enderecoDto">Objeto contendo os dados atualizados do endereco</param>
-            <returns>IActionResult indicando o resultado da operação</returns>
-            <response code="204">Se a atualização for bem-sucedida</response>
-            <response code="404">Se a endereco não for encontrada</response>
+            <param name="id">ID do endereço a ser atualizado.</param>
+            <param name="enderecoDto">Objeto contendo os dados atualizados do endereço.</param>
+            <returns>IActionResult indicando o resultado da operação.</returns>
+            <response code="204">Se a atualização for bem-sucedida.</response>
+            <response code="404">Se o endereço não for encontrado.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.DeleteEndereco(System.Int32)">
             <summary>
-            Deleta uma endereco específica com base no ID fornecido.
+            Deleta um endereço específico com base no ID fornecido.
             </summary>
-            <param name="id">ID do endereco a ser deletada</param>
-            <returns>IActionResult indicando o resultado da operação</returns>
-            <response code="204">Se a exclusão for bem-sucedida</response>
-            <response code="404">Se o endereco não for encontrada</response>
+            <param name="id">ID do endereço a ser deletado.</param>
+            <returns>IActionResult indicando o resultado da operação.</returns>
+            <response code="204">Se a exclusão for bem-sucedida.</response>
+            <response code="404">Se o endereço não for encontrado.</response>
+        </member>
+        <member name="T:Teste_Stage.Controllers.EntrevistaController">
+            <summary>
+            Controlador para gerenciar operações relacionadas a Entrevistas.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Controllers.EntrevistaController.#ctor(Teste_Stage.Services.EntrevistaService)">
+            <summary>
+            Construtor da classe EntrevistaController.
+            </summary>
+            <param name="entrevistaService">Instância do serviço de entrevistas.</param>
         </member>
         <member name="M:Teste_Stage.Controllers.EntrevistaController.CadastrarEntrevista(Teste_Stage.Data.Dtos.EntrevistaDtos.CreateEntrevistaDto)">
             <summary>
@@ -138,6 +160,104 @@
             <returns>IActionResult indicando o resultado da operação</returns>
             <response code="204">Se a exclusão for bem-sucedida</response>
             <response code="404">Se a entrevista não for encontrada</response>
+        </member>
+        <member name="T:Teste_Stage.Services.EnderecoService">
+            <summary>
+            Classe de serviço para gerenciar operações relacionadas a Endereços.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.#ctor(Teste_Stage.Data.CandidatoContext,AutoMapper.IMapper)">
+            <summary>
+            Construtor da classe EnderecoService.
+            </summary>
+            <param name="context">Contexto do banco de dados CandidatoContext.</param>
+            <param name="mapper">Instância do IMapper para mapeamento de objetos.</param>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.CadastrarEnderecoService(Teste_Stage.Data.Dtos.EnderecoDtos.CreateEnderecoDto)">
+            <summary>
+            Cadastra um novo endereço no banco de dados.
+            </summary>
+            <param name="enderecoDto">Objeto com os campos necessários para criação de um endereço.</param>
+            <returns>O objeto Endereco cadastrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.RecuperaEnderecosService(System.Int32,System.Int32)">
+            <summary>
+            Recupera uma lista de endereços com paginação.
+            </summary>
+            <param name="skip">Número de elementos a pular.</param>
+            <param name="take">Número de elementos a retornar.</param>
+            <returns>IEnumerable contendo os endereços recuperados.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.AchaEnderecoPorIdService(System.Int32)">
+            <summary>
+            Recupera um endereço específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereço a ser encontrado.</param>
+            <returns>Objeto ReadEnderecoDto contendo os dados do endereço encontrado ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.AtualizaEnderecoService(System.Int32,Teste_Stage.Data.Dtos.EnderecoDtos.UpdateEnderecoDto)">
+            <summary>
+            Atualiza um endereço específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereço a ser atualizado.</param>
+            <param name="enderecoDto">Objeto contendo os dados atualizados do endereço.</param>
+            <returns>O objeto Endereco atualizado ou null se não for encontrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EnderecoService.DeleteEnderecoService(System.Int32)">
+            <summary>
+            Deleta um endereço específico com base no ID fornecido.
+            </summary>
+            <param name="id">ID do endereço a ser deletado.</param>
+            <returns>O objeto Endereco deletado ou null se não for encontrado.</returns>
+        </member>
+        <member name="T:Teste_Stage.Services.EntrevistaService">
+            <summary>
+            Classe de serviço para gerenciar operações relacionadas a Entrevistas.
+            </summary>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.#ctor(Teste_Stage.Data.CandidatoContext,AutoMapper.IMapper)">
+            <summary>
+            Construtor da classe EntrevistaService.
+            </summary>
+            <param name="context">Contexto do banco de dados CandidatoContext.</param>
+            <param name="mapper">Instância do IMapper para mapeamento de objetos.</param>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.CadastrarEntrevistaService(Teste_Stage.Data.Dtos.EntrevistaDtos.CreateEntrevistaDto)">
+            <summary>
+            Cadastra uma nova entrevista no banco de dados.
+            </summary>
+            <param name="entrevistaDto">Objeto com os campos necessários para criação de uma entrevista.</param>
+            <returns>O objeto Entrevista cadastrado.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.RecuperaEntrevistasService(System.Int32,System.Int32)">
+            <summary>
+            Recupera uma lista de entrevistas com paginação.
+            </summary>
+            <param name="skip">Número de elementos a pular.</param>
+            <param name="take">Número de elementos a retornar.</param>
+            <returns>IEnumerable contendo as entrevistas recuperadas.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.AchaEntrevistaPorIdService(System.Int32)">
+            <summary>
+            Recupera uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser encontrada.</param>
+            <returns>Objeto ReadEntrevistaDto contendo os dados da entrevista encontrada ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.AtualizaEntrevistaService(System.Int32,Teste_Stage.Data.Dtos.EntrevistaDtos.UpdateEntrevistaDto)">
+            <summary>
+            Atualiza uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser atualizada.</param>
+            <param name="entrevistaDto">Objeto contendo os dados atualizados da entrevista.</param>
+            <returns>O objeto Entrevista atualizado ou null se não for encontrada.</returns>
+        </member>
+        <member name="M:Teste_Stage.Services.EntrevistaService.DeleteEntrevistaService(System.Int32)">
+            <summary>
+            Deleta uma entrevista específica com base no ID fornecido.
+            </summary>
+            <param name="id">ID da entrevista a ser deletada.</param>
+            <returns>O objeto Entrevista deletado ou null se não for encontrada.</returns>
         </member>
     </members>
 </doc>
