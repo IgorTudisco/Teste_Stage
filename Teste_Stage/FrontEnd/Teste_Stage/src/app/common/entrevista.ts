@@ -14,7 +14,7 @@ export class Entrevista {
     fitCultral: string,
     testeFeito: boolean,
     pontuacaoTest: number,
-    readCandidatoDto: Array<Candidato>
+    readCandidatoDto: Candidato[]
   ) {
     this.id = id;
     this.cargo = cargo;
