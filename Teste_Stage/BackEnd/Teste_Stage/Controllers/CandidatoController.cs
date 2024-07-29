@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data.Dtos.CandidatoDtos;
 using Teste_Stage.Models;
 using Teste_Stage.Services;
+using Teste_Stage.Services.ServiceResponse;
 
 namespace Teste_Stage.Controllers;
 
@@ -62,17 +63,25 @@ public class CandidatoController : ControllerBase
     }
 
     /// <summary>
-    /// Retorna uma lista de candidatos com base na quantidade e na paginação.
+    /// Retorna uma lista de candidatos com paginação. Você pode especificar a quantidade de elementos a serem retornados e pular uma quantidade específica de elementos.
     /// </summary>
     /// <param name="skip">Número de elementos a pular na lista de candidatos.</param>
-    /// <param name="take">Número de elementos a retornar.</param>
-    /// <returns>Uma lista de candidatos.</returns>
-    /// <response code="200">Retorna a lista de candidatos solicitada.</response>
+    /// <param name="take">Número de elementos a serem retornados na resposta.</param>
+    /// <returns>Um objeto `EmbeddedCandidatoResponse` contendo a lista de candidatos.</returns>
+    /// <response code="200">Caso a lista de candidatos seja retornada com sucesso.</response>
     [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadCandidatoDto> RecuperaCandidatos([FromQuery] int skip, [FromQuery] int take)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EmbeddedCandidatoResponse))]
+    public IActionResult RecuperaCandidatos([FromQuery] int skip, [FromQuery] int take)
     {
-        return _candidatoService.RecuperaCandidatosService(skip, take);
+        var candidato = _candidatoService.RecuperaCandidatosService(skip, take).ToList();
+        var response = new EmbeddedCandidatoResponse
+        {
+            _embedded = new EmbeddedCandidato
+            {
+                Candidato = candidato
+            }
+        };
+        return Ok(response);
     }
 
     /// <summary>

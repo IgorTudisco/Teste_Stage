@@ -27,12 +27,12 @@
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.RecuperaCandidatos(System.Int32,System.Int32)">
             <summary>
-            Retorna uma lista de candidatos com base na quantidade e na paginação.
+            Retorna uma lista de candidatos com paginação. Você pode especificar a quantidade de elementos a serem retornados e pular uma quantidade específica de elementos.
             </summary>
             <param name="skip">Número de elementos a pular na lista de candidatos.</param>
-            <param name="take">Número de elementos a retornar.</param>
-            <returns>Uma lista de candidatos.</returns>
-            <response code="200">Retorna a lista de candidatos solicitada.</response>
+            <param name="take">Número de elementos a serem retornados na resposta.</param>
+            <returns>Um objeto `EmbeddedCandidatoResponse` contendo a lista de candidatos.</returns>
+            <response code="200">Caso a lista de candidatos seja retornada com sucesso.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.CandidatoController.AchaCandidatoPorId(System.Int32)">
             <summary>
@@ -84,12 +84,12 @@
         </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.RecuperaEnderecos(System.Int32,System.Int32)">
             <summary>
-            Retorna uma lista de endereços. Você pode escolher a quantidade de elementos nessa lista.
+            Retorna uma lista de endereços com paginação. Você pode especificar a quantidade de elementos a serem retornados.
             </summary>
-            <param name="skip">Número de elementos a pular.</param>
-            <param name="take">Número de elementos a retornar.</param>
-            <returns>IEnumerable contendo os endereços recuperados.</returns>
-            <response code="200">Caso a lista seja retornada com sucesso.</response>
+            <param name="skip">Número de elementos a pular na lista de endereços.</param>
+            <param name="take">Número de elementos a serem retornados na resposta.</param>
+            <returns>Um objeto `EmbeddedEnderecoResponse` contendo a lista de endereços.</returns>
+            <response code="200">Caso a lista de endereços seja retornada com sucesso.</response>
         </member>
         <member name="M:Teste_Stage.Controllers.EnderecoController.AchaEnderecoPorId(System.Int32)">
             <summary>
@@ -212,9 +212,9 @@
             <summary>
             Recupera uma lista de candidatos com base nos parâmetros de paginação.
             </summary>
-            <param name="skip">Número de elementos a pular.</param>
-            <param name="take">Número de elementos a retornar.</param>
-            <returns>Retorna uma lista de candidatos.</returns>
+            <param name="skip">Número de elementos a pular na lista de candidatos.</param>
+            <param name="take">Número de elementos a serem retornados na resposta.</param>
+            <returns>Uma lista de `ReadCandidatoDto` contendo os candidatos recuperados.</returns>
         </member>
         <member name="M:Teste_Stage.Services.CandidatoService.AchaCandidatoPorIdService(System.Int32)">
             <summary>
@@ -261,9 +261,9 @@
             <summary>
             Recupera uma lista de endereços com paginação.
             </summary>
-            <param name="skip">Número de elementos a pular.</param>
-            <param name="take">Número de elementos a retornar.</param>
-            <returns>IEnumerable contendo os endereços recuperados.</returns>
+            <param name="skip">Número de elementos a pular na lista de endereços.</param>
+            <param name="take">Número de elementos a serem retornados na resposta.</param>
+            <returns>Uma lista de `ReadEnderecoDto` contendo os endereços recuperados.</returns>
         </member>
         <member name="M:Teste_Stage.Services.EnderecoService.AchaEnderecoPorIdService(System.Int32)">
             <summary>
@@ -336,12 +336,52 @@
             <param name="id">ID da entrevista a ser deletada.</param>
             <returns>O objeto Entrevista deletado ou null se não for encontrada.</returns>
         </member>
+        <member name="T:Teste_Stage.Services.ServiceResponse.EmbeddedCandidato">
+            <summary>
+            Representa uma coleção embutida de candidato.
+            </summary>
+        </member>
+        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedCandidato.Candidato">
+            <summary>
+            Lista de candidato.
+            </summary>
+        </member>
+        <member name="T:Teste_Stage.Services.ServiceResponse.EmbeddedCandidatoResponse">
+            <summary>
+            Representa a resposta contendo uma coleção de candidatos embutidas.
+            </summary>
+        </member>
+        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedCandidatoResponse._embedded">
+            <summary>
+            Coleção embutida de candidato.
+            </summary>
+        </member>
+        <member name="T:Teste_Stage.Services.ServiceResponse.EmbeddedEndereco">
+            <summary>
+            Representa uma coleção embutida de endereço.
+            </summary>
+        </member>
+        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedEndereco.Endereco">
+            <summary>
+            Lista de endereço.
+            </summary>
+        </member>
+        <member name="T:Teste_Stage.Services.ServiceResponse.EmbeddedEnderecoResponse">
+            <summary>
+            Representa a resposta contendo uma coleção de endereço embutidas.
+            </summary>
+        </member>
+        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedEnderecoResponse._embedded">
+            <summary>
+            Coleção embutida de endereço.
+            </summary>
+        </member>
         <member name="T:Teste_Stage.Services.ServiceResponse.EmbeddedEntrevista">
             <summary>
             Representa uma coleção embutida de entrevistas.
             </summary>
         </member>
-        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedEntrevista.entrevistas">
+        <member name="P:Teste_Stage.Services.ServiceResponse.EmbeddedEntrevista.Entrevistas">
             <summary>
             Lista de entrevistas.
             </summary>

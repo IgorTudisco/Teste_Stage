@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data.Dtos.EnderecoDtos;
+using Teste_Stage.Models;
 using Teste_Stage.Services;
+using Teste_Stage.Services.ServiceResponse;
 
 namespace Teste_Stage.Controllers;
 
@@ -39,17 +41,25 @@ public class EnderecoController : ControllerBase
     }
 
     /// <summary>
-    /// Retorna uma lista de endereços. Você pode escolher a quantidade de elementos nessa lista.
+    /// Retorna uma lista de endereços com paginação. Você pode especificar a quantidade de elementos a serem retornados.
     /// </summary>
-    /// <param name="skip">Número de elementos a pular.</param>
-    /// <param name="take">Número de elementos a retornar.</param>
-    /// <returns>IEnumerable contendo os endereços recuperados.</returns>
-    /// <response code="200">Caso a lista seja retornada com sucesso.</response>
+    /// <param name="skip">Número de elementos a pular na lista de endereços.</param>
+    /// <param name="take">Número de elementos a serem retornados na resposta.</param>
+    /// <returns>Um objeto `EmbeddedEnderecoResponse` contendo a lista de endereços.</returns>
+    /// <response code="200">Caso a lista de endereços seja retornada com sucesso.</response>
     [HttpGet]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadEnderecoDto> RecuperaEnderecos([FromQuery] int skip, [FromQuery] int take)
+    [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(EmbeddedEnderecoResponse))]
+    public IActionResult RecuperaEnderecos([FromQuery] int skip, [FromQuery] int take)
     {
-        return _enderecoService.RecuperaEnderecosService(skip, take);
+        var endereco = _enderecoService.RecuperaEnderecosService(skip, take).ToList();
+        var response = new EmbeddedEnderecoResponse
+        {
+            _embedded = new EmbeddedEndereco
+            {
+                Endereco = endereco
+            }
+        };
+        return Ok(response);
     }
 
     /// <summary>

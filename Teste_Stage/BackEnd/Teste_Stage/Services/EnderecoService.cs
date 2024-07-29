@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.EnderecoDtos;
+using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
 
 namespace Teste_Stage.Services;
@@ -40,12 +41,12 @@ public class EnderecoService
     /// <summary>
     /// Recupera uma lista de endereços com paginação.
     /// </summary>
-    /// <param name="skip">Número de elementos a pular.</param>
-    /// <param name="take">Número de elementos a retornar.</param>
-    /// <returns>IEnumerable contendo os endereços recuperados.</returns>
+    /// <param name="skip">Número de elementos a pular na lista de endereços.</param>
+    /// <param name="take">Número de elementos a serem retornados na resposta.</param>
+    /// <returns>Uma lista de `ReadEnderecoDto` contendo os endereços recuperados.</returns>
     public IEnumerable<ReadEnderecoDto> RecuperaEnderecosService(int skip = 0, int take = 5)
     {
-        return _mapper.Map<List<ReadEnderecoDto>>(_context.Enderecos.Skip(skip).Take(take));
+        return _mapper.Map<List<ReadEnderecoDto>>(_context.Enderecos.Skip(skip).Take(take).ToList());
     }
 
     /// <summary>

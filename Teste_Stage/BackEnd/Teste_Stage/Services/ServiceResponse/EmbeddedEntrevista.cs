@@ -10,6 +10,6 @@ public class EmbeddedEntrevista
     /// <summary>
     /// Lista de entrevistas.
     /// </summary>
-    public List<ReadEntrevistaDto> entrevistas { get; set; }
+    public List<ReadEntrevistaDto> Entrevistas { get; set; }
 
 }

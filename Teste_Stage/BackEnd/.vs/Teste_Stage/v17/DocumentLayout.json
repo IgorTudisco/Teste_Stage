@@ -3,44 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\serviceresponse\\embeddedentrevistaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\serviceresponse\\embeddedentrevistaresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\serviceresponse\\embeddedentrevista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\serviceresponse\\embeddedentrevista.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\entrevistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\entrevistaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\enderecoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\teste_stage.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\teste_stage.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\enderecodtos\\readenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\enderecodtos\\readenderecodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\candidatodtos\\readcandidatodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,106 +46,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Teste_Stage",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Teste_Stage.csproj",
-              "RelativeDocumentMoniker": "Teste_Stage\\Teste_Stage.csproj",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Teste_Stage.csproj",
-              "RelativeToolTip": "Teste_Stage\\Teste_Stage.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-07-29T14:43:39.99Z",
+              "DocumentIndex": 1,
+              "Title": "CandidatoService.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\CandidatoService.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Services\\CandidatoService.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\CandidatoService.cs",
+              "RelativeToolTip": "Teste_Stage\\Services\\CandidatoService.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAIwFkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T16:49:35.105Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Program.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Program.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Program.cs",
-              "RelativeToolTip": "Teste_Stage\\Program.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAAAAAC0AAAAgAAAA",
+              "Title": "EnderecoService.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\EnderecoService.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Services\\EnderecoService.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\EnderecoService.cs",
+              "RelativeToolTip": "Teste_Stage\\Services\\EnderecoService.cs",
+              "ViewState": "AQIAACUAAAAAAAAAAAAowDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T14:41:51.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmbeddedEntrevista.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevista.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevista.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevista.cs",
-              "RelativeToolTip": "Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevista.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T14:23:39.085Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmbeddedEntrevistaResponse.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevistaResponse.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevistaResponse.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevistaResponse.cs",
-              "RelativeToolTip": "Teste_Stage\\Services\\ServiceResponse\\EmbeddedEntrevistaResponse.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T14:22:55.258Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "Teste_Stage\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Properties\\launchSettings.json",
-              "RelativeToolTip": "Teste_Stage\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-29T14:07:20.535Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReadEntrevistaDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:36:05.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ReadEnderecoDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EnderecoDtos\\ReadEnderecoDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:36:03.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ReadCandidatoDto.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\CandidatoDtos\\ReadCandidatoDto.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBQAAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:36:01.883Z",
+              "WhenOpened": "2024-07-29T16:49:21.631Z",
               "EditorCaption": ""
             },
             {
@@ -172,20 +78,46 @@
               "RelativeDocumentMoniker": "Teste_Stage\\Services\\EntrevistaService.cs",
               "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\EntrevistaService.cs",
               "RelativeToolTip": "Teste_Stage\\Services\\EntrevistaService.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAiwCwAAABLAAAA",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowC8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-29T13:32:48.741Z",
+              "WhenOpened": "2024-07-29T16:49:33.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "CandidatoController.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\CandidatoController.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
+              "RelativeToolTip": "Teste_Stage\\Controllers\\CandidatoController.cs",
+              "ViewState": "AQIAAEQAAAAAAAAAAAAqwFQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T16:47:04.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EnderecoController.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\EnderecoController.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
+              "RelativeToolTip": "Teste_Stage\\Controllers\\EnderecoController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAowDUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T16:47:00.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "EntrevistaController.cs",
               "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EntrevistaController.cs",
               "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\EntrevistaController.cs",
               "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EntrevistaController.cs",
               "RelativeToolTip": "Teste_Stage\\Controllers\\EntrevistaController.cs",
-              "ViewState": "AQIAAC4AAAAAAAAAAAAqwD4AAAApAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAqwEAAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-29T02:13:54.964Z",
               "EditorCaption": ""

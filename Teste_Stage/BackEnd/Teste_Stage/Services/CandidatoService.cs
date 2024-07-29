@@ -2,6 +2,7 @@
 using Castle.Core.Internal;
 using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.CandidatoDtos;
+using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
 
 namespace Teste_Stage.Services;
@@ -80,12 +81,12 @@ public class CandidatoService
     /// <summary>
     /// Recupera uma lista de candidatos com base nos parâmetros de paginação.
     /// </summary>
-    /// <param name="skip">Número de elementos a pular.</param>
-    /// <param name="take">Número de elementos a retornar.</param>
-    /// <returns>Retorna uma lista de candidatos.</returns>
+    /// <param name="skip">Número de elementos a pular na lista de candidatos.</param>
+    /// <param name="take">Número de elementos a serem retornados na resposta.</param>
+    /// <returns>Uma lista de `ReadCandidatoDto` contendo os candidatos recuperados.</returns>
     public IEnumerable<ReadCandidatoDto> RecuperaCandidatosService(int skip = 0, int take = 5)
     {
-        return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.ToList().Skip(skip).Take(take));
+        return _mapper.Map<List<ReadCandidatoDto>>(_context.Candidatos.Skip(skip).Take(take).ToList());
     }
 
     /// <summary>

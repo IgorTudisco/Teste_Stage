@@ -60,7 +60,7 @@ public class EntrevistaController : ControllerBase
         {
             _embedded = new EmbeddedEntrevista
             {
-                entrevistas = entrevistas
+                Entrevistas = entrevistas
             }
         };
         return Ok(response);
