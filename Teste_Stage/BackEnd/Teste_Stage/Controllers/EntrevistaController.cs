@@ -5,6 +5,7 @@ using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.EntrevistaDtos;
 using Teste_Stage.Models;
 using Teste_Stage.Services;
+using Teste_Stage.Services.ServiceResponse;
 
 namespace Teste_Stage.Controllers;
 
@@ -48,13 +49,21 @@ public class EntrevistaController : ControllerBase
     /// </summary>
     /// <param name="skip">Número de elementos a pular</param>
     /// <param name="take">Número de elementos a retornar</param>
-    /// <returns>IActionResult</returns>
-    /// <response code="201">Caso inserção seja feita com sucesso</response>
+    /// <returns>Uma lista de entrevistas dentro de um contêiner _embedded.</returns>
+    /// <response code="200">Caso a recuperação seja feita com sucesso</response>
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
-    public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip,[FromQuery] int take)
+    public IActionResult RecuperaEntrevistas([FromQuery] int skip, [FromQuery] int take)
     {
-        return _entrevistaService.RecuperaEntrevistasService(skip, take).ToList();
+        var entrevistas = _entrevistaService.RecuperaEntrevistasService(skip, take).ToList();
+        var response = new EmbeddedEntrevistaResponse
+        {
+            _embedded = new EmbeddedEntrevista
+            {
+                entrevistas = entrevistas
+            }
+        };
+        return Ok(response);
     }
 
     /// <summary>
