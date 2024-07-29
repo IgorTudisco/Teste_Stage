@@ -2,12 +2,12 @@ import { Endereco } from "./endereco";
 import { Entrevista } from "./entrevista";
 
 export class Candidato {
-  id: number;
-  name: string;
-  genero: string;
-  numeroContato: string;
-  email: string;
-  descricao: string;
+  id?: number;
+  name?: string;
+  genero?: string;
+  numeroContato?: string;
+  email?: string;
+  descricao?: string;
   readEnderecoDto: Endereco;
   readEntrevistaDto: Entrevista;
 

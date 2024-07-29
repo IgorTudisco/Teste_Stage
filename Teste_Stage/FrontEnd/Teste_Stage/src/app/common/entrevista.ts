@@ -1,12 +1,12 @@
 import { Candidato } from "./candidato";
 
 export class Entrevista {
-  id: number;
-  cargo: string;
-  fitCultral: string;
-  testeFeito: boolean;
-  pontuacaoTest: number;
-  readCandidatoDto: Candidato[];
+  id?: number;
+  cargo?: string;
+  fitCultral?: string;
+  testeFeito?: boolean;
+  pontuacaoTest?: number;
+  readCandidatoDto?: Candidato[];
 
   constructor(
     id: number,

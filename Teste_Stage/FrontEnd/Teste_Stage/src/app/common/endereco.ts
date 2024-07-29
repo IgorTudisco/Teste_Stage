@@ -1,10 +1,10 @@
 export class Endereco {
-  id: number;
-  logradouro: string;
-  numero: string;
-  cidade: string;
-  estado: string;
-  uf: string;
+  id?: number;
+  logradouro?: string;
+  numero?: string;
+  cidade?: string;
+  estado?: string;
+  uf?: string;
 
   constructor(
     id: number,
