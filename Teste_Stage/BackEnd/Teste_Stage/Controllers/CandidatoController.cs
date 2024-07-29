@@ -1,4 +1,5 @@
 ﻿using Castle.Core.Internal;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data.Dtos.CandidatoDtos;
 using Teste_Stage.Models;
@@ -10,6 +11,7 @@ namespace Teste_Stage.Controllers;
 /// Controlador para gerenciar as operações relacionadas a candidatos.
 /// </summary>
 [ApiController]
+[EnableCors("AllowSpecificOrigin")]
 [Route("[Controller]")]
 public class CandidatoController : ControllerBase
 {

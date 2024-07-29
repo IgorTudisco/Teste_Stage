@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data;
 using Teste_Stage.Data.Dtos.EntrevistaDtos;
@@ -11,6 +12,7 @@ namespace Teste_Stage.Controllers;
 /// Controlador para gerenciar operações relacionadas a Entrevistas.
 /// </summary>
 [ApiController]
+[EnableCors("AllowSpecificOrigin")]
 [Route("[Controller]")]
 public class EntrevistaController : ControllerBase
 {
@@ -52,7 +54,7 @@ public class EntrevistaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status200OK)]
     public IEnumerable<ReadEntrevistaDto> RecuperaEntrevistas([FromQuery] int skip,[FromQuery] int take)
     {
-        return _entrevistaService.RecuperaEntrevistasService(skip, take);
+        return _entrevistaService.RecuperaEntrevistasService(skip, take).ToList();
     }
 
     /// <summary>

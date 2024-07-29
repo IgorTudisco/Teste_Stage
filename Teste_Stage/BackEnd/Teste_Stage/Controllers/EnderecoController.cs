@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using Teste_Stage.Data.Dtos.EnderecoDtos;
 using Teste_Stage.Services;
 
@@ -8,6 +9,7 @@ namespace Teste_Stage.Controllers;
 /// Controlador para gerenciar operações relacionadas a Endereços.
 /// </summary>
 [ApiController]
+[EnableCors("AllowSpecificOrigin")]
 [Route("[Controller]")]
 public class EnderecoController : ControllerBase
 {

@@ -1,0 +1,30 @@
+<h1>Lista de Entrevistas</h1>
+
+<div class="container mt-4">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Cargo</th>
+        <th>Fit Cultural</th>
+        <th>Teste Feito</th>
+        <th>Pontuação Teste</th>
+        <th>Candidatos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of entrevistas">
+        <td>{{ item.id }}</td>
+        <td>{{ item.cargo }}</td>
+        <td>{{ item.fitCultral }}</td>
+        <td>{{ item.testeFeito ? 'Sim' : 'Não' }}</td>
+        <td>{{ item.pontuacaoTest }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let candidato of item.readCandidatoDto">{{ candidato.nome }}</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

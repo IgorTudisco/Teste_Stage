@@ -26,6 +26,16 @@ builder.Services.AddScoped<EnderecoService>();
 builder.Services.AddScoped<EntrevistaService>();
 builder.Services.AddScoped<CandidatoService>();
 
+// Configuração de CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder
+            .WithOrigins("http://localhost:4200") // URL do seu frontend
+            .AllowAnyHeader()
+            .AllowAnyMethod());
+});
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -46,6 +56,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseRouting();
+
+// Adiciona o middleware de CORS
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 

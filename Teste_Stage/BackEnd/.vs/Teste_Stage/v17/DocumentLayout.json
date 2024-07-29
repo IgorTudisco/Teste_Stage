@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\services\\candidatoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\entrevistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\data\\dtos\\entrevistadtos\\readentrevistadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\candidatocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|c:\\users\\igort\\desktop\\teste_stage\\projeto\\teste_stage\\backend\\teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F343A07-1A6B-497F-8B9A-CDEE52BA03AF}|Teste_Stage\\Teste_Stage.csproj|solutionrelative:teste_stage\\controllers\\enderecocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,15 +42,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CandidatoService.cs",
-              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\CandidatoService.cs",
-              "RelativeDocumentMoniker": "Teste_Stage\\Services\\CandidatoService.cs",
-              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Services\\CandidatoService.cs",
-              "RelativeToolTip": "Teste_Stage\\Services\\CandidatoService.cs",
-              "ViewState": "AQIAAFUAAAAAAAAAAAAAAFUAAABLAAAA",
+              "DocumentIndex": 1,
+              "Title": "ReadEntrevistaDto.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "RelativeToolTip": "Teste_Stage\\Data\\Dtos\\EntrevistaDtos\\ReadEntrevistaDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-28T22:08:05.559Z",
+              "WhenOpened": "2024-07-29T02:36:48.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EntrevistaController.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EntrevistaController.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\EntrevistaController.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EntrevistaController.cs",
+              "RelativeToolTip": "Teste_Stage\\Controllers\\EntrevistaController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAowC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T02:13:54.964Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EnderecoController.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\EnderecoController.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\EnderecoController.cs",
+              "RelativeToolTip": "Teste_Stage\\Controllers\\EnderecoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T02:13:54.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CandidatoController.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Controllers\\CandidatoController.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Controllers\\CandidatoController.cs",
+              "RelativeToolTip": "Teste_Stage\\Controllers\\CandidatoController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T02:13:53.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Program.cs",
+              "RelativeDocumentMoniker": "Teste_Stage\\Program.cs",
+              "ToolTip": "C:\\Users\\igort\\Desktop\\Teste_Stage\\Projeto\\Teste_Stage\\BackEnd\\Teste_Stage\\Program.cs",
+              "RelativeToolTip": "Teste_Stage\\Program.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAiwD0AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T02:11:47.262Z",
               "EditorCaption": ""
             }
           ]
